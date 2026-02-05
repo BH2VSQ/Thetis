@@ -75,6 +75,7 @@ namespace Thetis
     using System.Windows.Forms;
     using System.Xml.Linq;
     using System.Collections.Concurrent;
+    using System.ComponentModel;
 
     public partial class Console : Form
     {
@@ -47261,7 +47262,7 @@ namespace Thetis
                 ApplyLocalizableResourcesToToolStripItems(resources, form.MainMenuStrip.Items, culture);
         }
 
-        private static void ApplyLocalizableResourcesToControls(ComponentResourceManager resources, Control.ControlCollection controls, CultureInfo culture)
+        private static void ApplyLocalizableResourcesToControls(System.ComponentModel.ComponentResourceManager resources, Control.ControlCollection controls, CultureInfo culture)
         {
             foreach (Control control in controls)
             {
@@ -47279,7 +47280,7 @@ namespace Thetis
             }
         }
 
-        private static void ApplyLocalizableResourcesToToolStripItems(ComponentResourceManager resources, ToolStripItemCollection items, CultureInfo culture)
+        private static void ApplyLocalizableResourcesToToolStripItems(System.ComponentModel.ComponentResourceManager resources, ToolStripItemCollection items, CultureInfo culture)
         {
             foreach (ToolStripItem item in items)
             {
