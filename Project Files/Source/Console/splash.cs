@@ -543,14 +543,16 @@ namespace Thetis
 			System.Windows.Forms.PaintEventArgs e)
 		{
 			if( m_bFirstLaunch == false && e.ClipRectangle.Width > 0 
-				&& m_iActualTicks > 1 )
+				&& m_iActualTicks > 1 && m_rProgress.Width > 0 && m_rProgress.Height > 0 )
 			{
-				LinearGradientBrush brBackground = 
+				using (LinearGradientBrush brBackground =
 					new LinearGradientBrush(m_rProgress, 
 					Color.FromArgb(100, 100, 100),
 					Color.FromArgb(130, 255, 130), 
-					LinearGradientMode.Horizontal);
-				e.Graphics.FillRectangle(brBackground, m_rProgress);
+					LinearGradientMode.Horizontal))
+				{
+					e.Graphics.FillRectangle(brBackground, m_rProgress);
+				}
 			}
 		}
 
