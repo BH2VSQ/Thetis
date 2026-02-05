@@ -89,33 +89,34 @@ namespace Thetis
         }
 
         private UiLanguage _selectedUiLanguage = UiLanguage.English;
+        private readonly Dictionary<string, string> _menuEnglishText = new Dictionary<string, string>();
 
         private static readonly Dictionary<string, string> _menuZhCnText = new Dictionary<string, string>
         {
-            { "setupToolStripMenuItem", "设置" },
-            { "memoryToolStripMenuItem", "记忆" },
-            { "waveToolStripMenuItem", "波形" },
-            { "equalizerToolStripMenuItem", "均衡器" },
-            { "xVTRsToolStripMenuItem", "转换器" },
+            { "setupToolStripMenuItem", "\u8BBE\u7F6E" },
+            { "memoryToolStripMenuItem", "\u8BB0\u5FC6" },
+            { "waveToolStripMenuItem", "\u6CE2\u5F62" },
+            { "equalizerToolStripMenuItem", "\u5747\u8861\u5668" },
+            { "xVTRsToolStripMenuItem", "\u8F6C\u6362\u5668" },
             { "cWXToolStripMenuItem", "CWX" },
             { "eSCToolStripMenuItem", "ESC" },
-            { "collapseToolStripMenuItem", "收起" },
-            { "displayControlsToolStripMenuItem", "显示控制" },
-            { "dSPToolStripMenuItem", "数字信号处理" },
-            { "bandToolStripMenuItem", "波段" },
-            { "modeToolStripMenuItem", "模式" },
-            { "filterToolStripMenuItem", "滤波器" },
+            { "collapseToolStripMenuItem", "\u6536\u8D77" },
+            { "displayControlsToolStripMenuItem", "\u663E\u793A\u63A7\u5236" },
+            { "dSPToolStripMenuItem", "\u6570\u5B57\u4FE1\u53F7\u5904\u7406" },
+            { "bandToolStripMenuItem", "\u6CE2\u6BB5" },
+            { "modeToolStripMenuItem", "\u6A21\u5F0F" },
+            { "filterToolStripMenuItem", "\u6EE4\u6CE2\u5668" },
             { "rX2ToolStripMenuItem", "RX2" },
-            { "linearityToolStripMenuItem", "线性" },
-            { "RAtoolStripMenuItem", "无线电天文" },
-            { "wBToolStripMenuItem", "宽带" },
+            { "linearityToolStripMenuItem", "\u7EBF\u6027" },
+            { "RAtoolStripMenuItem", "\u65E0\u7EBF\u7535\u5929\u6587" },
+            { "wBToolStripMenuItem", "\u5BBD\u5E26" },
             { "pIToolStripMenuItem", "PI" },
-            { "BPFToolStripMenuItem", "带通滤波" },
-            { "finderMenuItem", "查找" },
-            { "miAbout", "关于" },
-            { "languageToolStripMenuItem", "语言" },
+            { "BPFToolStripMenuItem", "\u5E26\u901A\u6EE4\u6CE2" },
+            { "finderMenuItem", "\u67E5\u627E" },
+            { "miAbout", "\u5173\u4E8E" },
+            { "languageToolStripMenuItem", "\u8BED\u8A00" },
             { "languageEnglishToolStripMenuItem", "English" },
-            { "languageChineseToolStripMenuItem", "中文" }
+            { "languageChineseToolStripMenuItem", "\u4E2D\u6587" }
         };
 
         #region Variable Declarations
@@ -755,6 +756,7 @@ namespace Thetis
             LogTool.AddLogEntry("Initialising components...", "COMP");
 
             InitializeComponent();								// Windows Forms Generated Code
+            CaptureEnglishMenuText();
             ApplyUiLanguage(UiLanguage.English);
             Common.DoubleBufferAll(this, true);
 
@@ -47171,74 +47173,41 @@ namespace Thetis
             }
             else
             {
-                ApplyEnglishMenuText();
+                RestoreEnglishMenuText();
             }
 
             languageEnglishToolStripMenuItem.Checked = language == UiLanguage.English;
             languageChineseToolStripMenuItem.Checked = language == UiLanguage.Chinese;
         }
 
-        private void ApplyEnglishMenuText()
+        private void CaptureEnglishMenuText()
         {
-            var resources = new System.ComponentModel.ComponentResourceManager(typeof(Console));
-            ApplyResourceText(resources, setupToolStripMenuItem, "setupToolStripMenuItem");
-            ApplyResourceText(resources, memoryToolStripMenuItem, "memoryToolStripMenuItem");
-            ApplyResourceText(resources, waveToolStripMenuItem, "waveToolStripMenuItem");
-            ApplyResourceText(resources, equalizerToolStripMenuItem, "equalizerToolStripMenuItem");
-            ApplyResourceText(resources, xVTRsToolStripMenuItem, "xVTRsToolStripMenuItem");
-            ApplyResourceText(resources, cWXToolStripMenuItem, "cWXToolStripMenuItem");
-            ApplyResourceText(resources, eSCToolStripMenuItem, "eSCToolStripMenuItem");
-            ApplyResourceText(resources, collapseToolStripMenuItem, "collapseToolStripMenuItem");
-            ApplyResourceText(resources, displayControlsToolStripMenuItem, "displayControlsToolStripMenuItem");
-            ApplyResourceText(resources, dSPToolStripMenuItem, "dSPToolStripMenuItem");
-            ApplyResourceText(resources, bandToolStripMenuItem, "bandToolStripMenuItem");
-            ApplyResourceText(resources, modeToolStripMenuItem, "modeToolStripMenuItem");
-            ApplyResourceText(resources, filterToolStripMenuItem, "filterToolStripMenuItem");
-            ApplyResourceText(resources, rX2ToolStripMenuItem, "rX2ToolStripMenuItem");
-            ApplyResourceText(resources, linearityToolStripMenuItem, "linearityToolStripMenuItem");
-            ApplyResourceText(resources, RAtoolStripMenuItem, "RAtoolStripMenuItem");
-            ApplyResourceText(resources, wBToolStripMenuItem, "wBToolStripMenuItem");
-            ApplyResourceText(resources, pIToolStripMenuItem, "pIToolStripMenuItem");
-            ApplyResourceText(resources, BPFToolStripMenuItem, "BPFToolStripMenuItem");
-            ApplyResourceText(resources, finderMenuItem, "finderMenuItem");
-            ApplyResourceText(resources, miAbout, "miAbout");
-            ApplyResourceText(resources, languageToolStripMenuItem, "languageToolStripMenuItem");
-            ApplyResourceText(resources, languageEnglishToolStripMenuItem, "languageEnglishToolStripMenuItem");
-            ApplyResourceText(resources, languageChineseToolStripMenuItem, "languageChineseToolStripMenuItem");
+            _menuEnglishText.Clear();
+
+            foreach (ToolStripMenuItem menuItem in EnumerateMenuItems(menuStrip1.Items))
+            {
+                if (string.IsNullOrWhiteSpace(menuItem.Name)) continue;
+                _menuEnglishText[menuItem.Name] = menuItem.Text;
+            }
         }
 
-        private static void ApplyResourceText(System.ComponentModel.ComponentResourceManager resources, ToolStripMenuItem item, string resourceKey)
+        private void RestoreEnglishMenuText()
         {
-            string text = resources.GetString(resourceKey + ".Text");
-            if (!string.IsNullOrEmpty(text)) item.Text = text;
+            foreach (ToolStripMenuItem menuItem in EnumerateMenuItems(menuStrip1.Items))
+            {
+                if (!string.IsNullOrWhiteSpace(menuItem.Name) && _menuEnglishText.TryGetValue(menuItem.Name, out string text))
+                {
+                    menuItem.Text = text;
+                }
+            }
         }
 
         private void ApplyLocalizedMenuText(Dictionary<string, string> menuText)
         {
-            ApplyLocalizedMenuItemText(setupToolStripMenuItem, "setupToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(memoryToolStripMenuItem, "memoryToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(waveToolStripMenuItem, "waveToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(equalizerToolStripMenuItem, "equalizerToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(xVTRsToolStripMenuItem, "xVTRsToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(cWXToolStripMenuItem, "cWXToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(eSCToolStripMenuItem, "eSCToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(collapseToolStripMenuItem, "collapseToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(displayControlsToolStripMenuItem, "displayControlsToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(dSPToolStripMenuItem, "dSPToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(bandToolStripMenuItem, "bandToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(modeToolStripMenuItem, "modeToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(filterToolStripMenuItem, "filterToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(rX2ToolStripMenuItem, "rX2ToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(linearityToolStripMenuItem, "linearityToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(RAtoolStripMenuItem, "RAtoolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(wBToolStripMenuItem, "wBToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(pIToolStripMenuItem, "pIToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(BPFToolStripMenuItem, "BPFToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(finderMenuItem, "finderMenuItem", menuText);
-            ApplyLocalizedMenuItemText(miAbout, "miAbout", menuText);
-            ApplyLocalizedMenuItemText(languageToolStripMenuItem, "languageToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(languageEnglishToolStripMenuItem, "languageEnglishToolStripMenuItem", menuText);
-            ApplyLocalizedMenuItemText(languageChineseToolStripMenuItem, "languageChineseToolStripMenuItem", menuText);
+            foreach (ToolStripMenuItem menuItem in EnumerateMenuItems(menuStrip1.Items))
+            {
+                ApplyLocalizedMenuItemText(menuItem, menuItem.Name, menuText);
+            }
         }
 
         private static void ApplyLocalizedMenuItemText(ToolStripMenuItem item, string key, Dictionary<string, string> menuText)
@@ -47246,6 +47215,22 @@ namespace Thetis
             if (menuText.TryGetValue(key, out string text))
             {
                 item.Text = text;
+            }
+        }
+
+        private static IEnumerable<ToolStripMenuItem> EnumerateMenuItems(ToolStripItemCollection items)
+        {
+            foreach (ToolStripItem item in items)
+            {
+                if (item is ToolStripMenuItem menuItem)
+                {
+                    yield return menuItem;
+
+                    foreach (ToolStripMenuItem child in EnumerateMenuItems(menuItem.DropDownItems))
+                    {
+                        yield return child;
+                    }
+                }
             }
         }
 
