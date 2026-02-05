@@ -60,7 +60,7 @@
             this.btnSet.Selectable = true;
             this.btnSet.Size = new System.Drawing.Size(64, 21);
             this.btnSet.TabIndex = 1;
-            this.btnSet.Text = "Set";
+            this.btnSet.Text = "设置";
             this.btnSet.UseVisualStyleBackColor = true;
             this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
             // 

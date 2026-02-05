@@ -119,7 +119,7 @@
             this.lnkLicence.Size = new System.Drawing.Size(96, 16);
             this.lnkLicence.TabIndex = 5;
             this.lnkLicence.TabStop = true;
-            this.lnkLicence.Text = "License Terms";
+            this.lnkLicence.Text = "许可条款";
             this.lnkLicence.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkLicence_LinkClicked);
             // 
             // lstLinks
@@ -182,7 +182,7 @@
             this.btnUpdatedRelease.Selectable = true;
             this.btnUpdatedRelease.Size = new System.Drawing.Size(196, 58);
             this.btnUpdatedRelease.TabIndex = 13;
-            this.btnUpdatedRelease.Text = "Version 2.10.3.8\r\nhas been released";
+            this.btnUpdatedRelease.Text = "版本 2.10.3.8\r\nhas been released";
             this.toolTip1.SetToolTip(this.btnUpdatedRelease, "New release available");
             this.btnUpdatedRelease.UseVisualStyleBackColor = false;
             this.btnUpdatedRelease.Click += new System.EventHandler(this.btnUpdatedRelease_Click);
@@ -227,8 +227,8 @@
             this.btnSysInfo.Selectable = true;
             this.btnSysInfo.Size = new System.Drawing.Size(88, 23);
             this.btnSysInfo.TabIndex = 7;
-            this.btnSysInfo.Text = "System Info";
-            this.toolTip1.SetToolTip(this.btnSysInfo, "Show system info");
+            this.btnSysInfo.Text = "系统信息";
+            this.toolTip1.SetToolTip(this.btnSysInfo, "显示系统信息");
             this.btnSysInfo.UseVisualStyleBackColor = false;
             this.btnSysInfo.Click += new System.EventHandler(this.btnSysInfo_Click);
             // 
@@ -277,7 +277,7 @@
             this.labelTS2.Name = "labelTS2";
             this.labelTS2.Size = new System.Drawing.Size(81, 16);
             this.labelTS2.TabIndex = 4;
-            this.labelTS2.Text = "Contributors:";
+            this.labelTS2.Text = "贡献者:";
             // 
             // btnOK
             // 
@@ -289,7 +289,7 @@
             this.btnOK.Selectable = true;
             this.btnOK.Size = new System.Drawing.Size(88, 23);
             this.btnOK.TabIndex = 2;
-            this.btnOK.Text = "OK";
+            this.btnOK.Text = "确定";
             this.btnOK.UseVisualStyleBackColor = false;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
@@ -331,7 +331,7 @@
             this.MinimizeBox = false;
             this.Name = "frmAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "About Thetis";
+            this.Text = "关于 Thetis";
             this.ResumeLayout(false);
             this.PerformLayout();
 

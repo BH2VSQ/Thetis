@@ -52,7 +52,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Name";
+            this.label1.Text = "名称";
             // 
             // saveButton
             // 
@@ -61,7 +61,7 @@
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 2;
-            this.saveButton.Text = "Save";
+            this.saveButton.Text = "保存";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
@@ -72,7 +72,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Cancel";
+            this.button2.Text = "取消";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -82,7 +82,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Saved Mappings";
+            this.label2.Text = "已保存映射";
             // 
             // mappingsLB
             // 
@@ -122,7 +122,7 @@
             this.Name = "SaveAsDialog";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Save Mapping";
+            this.Text = "保存映射";
             this.ResumeLayout(false);
             this.PerformLayout();
 

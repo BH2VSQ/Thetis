@@ -125,8 +125,8 @@ namespace Thetis
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(219, 13);
             this.textBox4.TabIndex = 17;
-            this.textBox4.Text = "Schedule Start Date for selected Memory\r\n";
-            this.toolTip1.SetToolTip(this.textBox4, "Schedule Start Date to change Frequency and optionally record");
+            this.textBox4.Text = "Schedule Start Date for selected 记忆\r\n";
+            this.toolTip1.SetToolTip(this.textBox4, "Schedule Start Date to change 频率 and optionally record");
             // 
             // textBox6
             // 
@@ -137,7 +137,7 @@ namespace Thetis
             this.textBox6.Size = new System.Drawing.Size(90, 13);
             this.textBox6.TabIndex = 19;
             this.textBox6.Text = "Start Time (local)";
-            this.toolTip1.SetToolTip(this.textBox6, "Schedule Start Time to change Frequency and optionally record");
+            this.toolTip1.SetToolTip(this.textBox6, "Schedule Start Time to change 频率 and optionally record");
             // 
             // textBox8
             // 
@@ -147,8 +147,8 @@ namespace Thetis
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(147, 13);
             this.textBox8.TabIndex = 21;
-            this.textBox8.Text = "Set <- Duration ->Remaining";
-            this.toolTip1.SetToolTip(this.textBox8, "Duration of Scheduled recording (if Enabled)");
+            this.textBox8.Text = "设置 <- Duration ->Remaining";
+            this.toolTip1.SetToolTip(this.textBox8, "Duration of Scheduled recording (if 启用)");
             // 
             // ScheduleStartDate
             // 
@@ -170,7 +170,7 @@ namespace Thetis
             this.ScheduleStartTime.ShowUpDown = true;
             this.ScheduleStartTime.Size = new System.Drawing.Size(90, 20);
             this.ScheduleStartTime.TabIndex = 61;
-            this.toolTip1.SetToolTip(this.ScheduleStartTime, "Initial Time of Schedule for this Selected Memory.\r\nIgnores the seconds.");
+            this.toolTip1.SetToolTip(this.ScheduleStartTime, "Initial Time of Schedule for this Selected 记忆.\r\nIgnores the seconds.");
             this.ScheduleStartTime.ValueChanged += new System.EventHandler(this.ScheduleStartDate_ValueChanged);
             // 
             // MemComments
@@ -180,7 +180,7 @@ namespace Thetis
             this.MemComments.Name = "MemComments";
             this.MemComments.Size = new System.Drawing.Size(435, 20);
             this.MemComments.TabIndex = 14;
-            this.toolTip1.SetToolTip(this.MemComments, "Comments of currently selected Memory. Including any Hyperlinks");
+            this.toolTip1.SetToolTip(this.MemComments, "Comments of currently selected 记忆. Including any Hyperlinks");
             // 
             // ScheduleRemain
             // 
@@ -198,7 +198,7 @@ namespace Thetis
             this.MemFreq.Name = "MemFreq";
             this.MemFreq.Size = new System.Drawing.Size(133, 20);
             this.MemFreq.TabIndex = 67;
-            this.toolTip1.SetToolTip(this.MemFreq, "Frequency of currently selected Memory");
+            this.toolTip1.SetToolTip(this.MemFreq, "频率 of currently selected 记忆");
             // 
             // MemGroup
             // 
@@ -207,7 +207,7 @@ namespace Thetis
             this.MemGroup.Name = "MemGroup";
             this.MemGroup.Size = new System.Drawing.Size(163, 20);
             this.MemGroup.TabIndex = 68;
-            this.toolTip1.SetToolTip(this.MemGroup, "Group name of currently selected Memory");
+            this.toolTip1.SetToolTip(this.MemGroup, "Group name of currently selected 记忆");
             // 
             // MemName
             // 
@@ -216,7 +216,7 @@ namespace Thetis
             this.MemName.Name = "MemName";
             this.MemName.Size = new System.Drawing.Size(127, 20);
             this.MemName.TabIndex = 69;
-            this.toolTip1.SetToolTip(this.MemName, "Name of currently selected Memory");
+            this.toolTip1.SetToolTip(this.MemName, "名称 of currently selected 记忆");
             // 
             // buttonTS1
             // 
@@ -254,7 +254,7 @@ namespace Thetis
             this.ScheduleOn.Size = new System.Drawing.Size(101, 23);
             this.ScheduleOn.TabIndex = 62;
             this.ScheduleOn.Text = "Schedule On";
-            this.toolTip1.SetToolTip(this.ScheduleOn, "Check box to turn of Scheduler for this Selected Memory.");
+            this.toolTip1.SetToolTip(this.ScheduleOn, "Check box to turn of Scheduler for this Selected 记忆.");
             this.ScheduleOn.UseCompatibleTextRendering = true;
             this.ScheduleOn.Visible = false;
             this.ScheduleOn.CheckedChanged += new System.EventHandler(this.ScheduleOn_CheckedChanged);
@@ -282,7 +282,7 @@ namespace Thetis
             this.ScheduleDurationTime.Size = new System.Drawing.Size(56, 20);
             this.ScheduleDurationTime.TabIndex = 24;
             this.ScheduleDurationTime.TinyStep = false;
-            this.toolTip1.SetToolTip(this.ScheduleDurationTime, "Duration of Scheduled recording (if Enabled)");
+            this.toolTip1.SetToolTip(this.ScheduleDurationTime, "Duration of Scheduled recording (if 启用)");
             this.ScheduleDurationTime.Value = new decimal(new int[] {
             30,
             0,
@@ -311,7 +311,7 @@ namespace Thetis
             this.ScheduleRepeat.Size = new System.Drawing.Size(116, 23);
             this.ScheduleRepeat.TabIndex = 22;
             this.ScheduleRepeat.Text = "Schedule Weekly";
-            this.toolTip1.SetToolTip(this.ScheduleRepeat, "Check to Schedule every Week.\r\nTurn Both off to turn of Memory Schedule.");
+            this.toolTip1.SetToolTip(this.ScheduleRepeat, "Check to Schedule every Week.\r\nTurn Both off to turn of 记忆 Schedule.");
             this.ScheduleRepeat.CheckedChanged += new System.EventHandler(this.ScheduleRepeat_CheckedChanged);
             // 
             // chkMemoryFormClose
@@ -322,8 +322,8 @@ namespace Thetis
             this.chkMemoryFormClose.Name = "chkMemoryFormClose";
             this.chkMemoryFormClose.Size = new System.Drawing.Size(89, 32);
             this.chkMemoryFormClose.TabIndex = 12;
-            this.chkMemoryFormClose.Text = "Close after selection";
-            this.toolTip1.SetToolTip(this.chkMemoryFormClose, "Check to close the Memory window after an entry has been selected");
+            this.chkMemoryFormClose.Text = "关闭 after selection";
+            this.toolTip1.SetToolTip(this.chkMemoryFormClose, "Check to close the 记忆 window after an entry has been selected");
             // 
             // btnSelect
             // 
@@ -334,7 +334,7 @@ namespace Thetis
             this.btnSelect.Selectable = true;
             this.btnSelect.Size = new System.Drawing.Size(75, 23);
             this.btnSelect.TabIndex = 5;
-            this.btnSelect.Text = "Select";
+            this.btnSelect.Text = "选择";
             this.toolTip1.SetToolTip(this.btnSelect, "Make the selected memory active ");
             this.btnSelect.UseVisualStyleBackColor = true;
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
@@ -348,8 +348,8 @@ namespace Thetis
             this.btnMemoryRecordDelete.Selectable = true;
             this.btnMemoryRecordDelete.Size = new System.Drawing.Size(75, 23);
             this.btnMemoryRecordDelete.TabIndex = 4;
-            this.btnMemoryRecordDelete.Text = "Delete";
-            this.toolTip1.SetToolTip(this.btnMemoryRecordDelete, "Delete the current row");
+            this.btnMemoryRecordDelete.Text = "删除";
+            this.toolTip1.SetToolTip(this.btnMemoryRecordDelete, "删除 the current row");
             this.btnMemoryRecordDelete.UseVisualStyleBackColor = true;
             this.btnMemoryRecordDelete.Click += new System.EventHandler(this.btnMemoryRecordDelete_Click);
             // 
@@ -377,7 +377,7 @@ namespace Thetis
             this.MemoryRecordAdd.Selectable = true;
             this.MemoryRecordAdd.Size = new System.Drawing.Size(75, 23);
             this.MemoryRecordAdd.TabIndex = 2;
-            this.MemoryRecordAdd.Text = "Add";
+            this.MemoryRecordAdd.Text = "添加";
             this.toolTip1.SetToolTip(this.MemoryRecordAdd, resources.GetString("MemoryRecordAdd.ToolTip"));
             this.MemoryRecordAdd.UseVisualStyleBackColor = true;
             this.MemoryRecordAdd.Click += new System.EventHandler(this.MemoryRecordAdd_Click);
@@ -413,7 +413,7 @@ namespace Thetis
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(133, 13);
             this.textBox2.TabIndex = 64;
-            this.textBox2.Text = "Frequency: (mhz)";
+            this.textBox2.Text = "频率: (mhz)";
             // 
             // textBox5
             // 
@@ -433,7 +433,7 @@ namespace Thetis
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(127, 13);
             this.textBox7.TabIndex = 66;
-            this.textBox7.Text = "Name:";
+            this.textBox7.Text = "名称:";
             // 
             // openFileDialog1
             // 
@@ -478,7 +478,7 @@ namespace Thetis
             this.chkAlwaysOnTop.Name = "chkAlwaysOnTop";
             this.chkAlwaysOnTop.Size = new System.Drawing.Size(79, 36);
             this.chkAlwaysOnTop.TabIndex = 59;
-            this.chkAlwaysOnTop.Text = "Always On Top";
+            this.chkAlwaysOnTop.Text = "总在最前";
             this.chkAlwaysOnTop.CheckedChanged += new System.EventHandler(this.chkAlwaysOnTop_CheckedChanged);
             // 
             // MemoryForm
@@ -518,7 +518,7 @@ namespace Thetis
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(526, 367);
             this.Name = "MemoryForm";
-            this.Text = "Memory Interface";
+            this.Text = "记忆 Interface";
             this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MemoryForm_FormClosing);
             this.Load += new System.EventHandler(this.MemoryForm_Load);

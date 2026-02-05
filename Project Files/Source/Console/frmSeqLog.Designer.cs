@@ -83,7 +83,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(844, 520);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "SEQ Errors";
+            this.tabPage1.Text = "SEQ 错误";
             // 
             // txtLog
             // 
@@ -144,7 +144,7 @@
             this.btnShowDumpCapFolder.Name = "btnShowDumpCapFolder";
             this.btnShowDumpCapFolder.Size = new System.Drawing.Size(147, 50);
             this.btnShowDumpCapFolder.TabIndex = 5;
-            this.btnShowDumpCapFolder.Text = "Open DumpCap Folder";
+            this.btnShowDumpCapFolder.Text = "打开 DumpCap 文件夹";
             this.btnShowDumpCapFolder.UseVisualStyleBackColor = true;
             this.btnShowDumpCapFolder.Click += new System.EventHandler(this.btnShowDumpCapFolder_Click);
             // 
@@ -156,7 +156,7 @@
             this.chkClearRingBufferFolderOnRestart.Name = "chkClearRingBufferFolderOnRestart";
             this.chkClearRingBufferFolderOnRestart.Size = new System.Drawing.Size(211, 17);
             this.chkClearRingBufferFolderOnRestart.TabIndex = 4;
-            this.chkClearRingBufferFolderOnRestart.Text = "Clear DumpCap folder on Thetis startup";
+            this.chkClearRingBufferFolderOnRestart.Text = "清除 DumpCap folder on Thetis startup";
             this.chkClearRingBufferFolderOnRestart.UseVisualStyleBackColor = true;
             this.chkClearRingBufferFolderOnRestart.CheckedChanged += new System.EventHandler(this.chkClearRingBufferFolderOnRestart_CheckedChanged);
             // 
@@ -168,7 +168,7 @@
             this.chkKillOnNegativeOnly.Name = "chkKillOnNegativeOnly";
             this.chkKillOnNegativeOnly.Size = new System.Drawing.Size(202, 17);
             this.chkKillOnNegativeOnly.TabIndex = 3;
-            this.chkKillOnNegativeOnly.Text = "New ringbuffer files for -ve deltas only";
+            this.chkKillOnNegativeOnly.Text = "仅在负增量时生成新 ringbuffer 文件";
             this.chkKillOnNegativeOnly.UseVisualStyleBackColor = true;
             this.chkKillOnNegativeOnly.CheckedChanged += new System.EventHandler(this.chkKillOnNegativeOnly_CheckedChanged);
             // 
@@ -180,7 +180,7 @@
             this.labelTS8.Name = "labelTS8";
             this.labelTS8.Size = new System.Drawing.Size(87, 13);
             this.labelTS8.TabIndex = 2;
-            this.labelTS8.Text = "Interface number";
+            this.labelTS8.Text = "接口编号";
             this.labelTS8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // udInterface
@@ -219,7 +219,7 @@
             this.chkDumpCapEnabled.Name = "chkDumpCapEnabled";
             this.chkDumpCapEnabled.Size = new System.Drawing.Size(65, 17);
             this.chkDumpCapEnabled.TabIndex = 0;
-            this.chkDumpCapEnabled.Text = "Enabled";
+            this.chkDumpCapEnabled.Text = "启用";
             this.chkDumpCapEnabled.UseVisualStyleBackColor = true;
             this.chkDumpCapEnabled.CheckedChanged += new System.EventHandler(this.chkDumpCapEnabled_CheckedChanged);
             // 
@@ -231,7 +231,7 @@
             this.labelTS7.Name = "labelTS7";
             this.labelTS7.Size = new System.Drawing.Size(92, 13);
             this.labelTS7.TabIndex = 2;
-            this.labelTS7.Text = "WireShark folder :";
+            this.labelTS7.Text = "WireShark 文件夹 :";
             this.labelTS7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnSetWireSharkFolder
@@ -241,7 +241,7 @@
             this.btnSetWireSharkFolder.Name = "btnSetWireSharkFolder";
             this.btnSetWireSharkFolder.Size = new System.Drawing.Size(102, 34);
             this.btnSetWireSharkFolder.TabIndex = 1;
-            this.btnSetWireSharkFolder.Text = "Select Folder";
+            this.btnSetWireSharkFolder.Text = "选择文件夹";
             this.btnSetWireSharkFolder.UseVisualStyleBackColor = true;
             this.btnSetWireSharkFolder.Click += new System.EventHandler(this.btnSetWireSharkFolder_Click);
             // 
@@ -283,7 +283,7 @@
             this.chkStatusBarWarningNegativeOnly.Name = "chkStatusBarWarningNegativeOnly";
             this.chkStatusBarWarningNegativeOnly.Size = new System.Drawing.Size(171, 17);
             this.chkStatusBarWarningNegativeOnly.TabIndex = 12;
-            this.chkStatusBarWarningNegativeOnly.Text = "Status bar warning on -VE only";
+            this.chkStatusBarWarningNegativeOnly.Text = "仅在负值时状态栏警告";
             this.chkStatusBarWarningNegativeOnly.UseVisualStyleBackColor = true;
             this.chkStatusBarWarningNegativeOnly.CheckedChanged += new System.EventHandler(this.chkStatusBarWarningNegativeOnly_CheckedChanged);
             // 
@@ -306,7 +306,7 @@
             this.labelTS2.Name = "labelTS2";
             this.labelTS2.Size = new System.Drawing.Size(281, 13);
             this.labelTS2.TabIndex = 3;
-            this.labelTS2.Text = "0 = there is no delta so expected packet number is correct";
+            this.labelTS2.Text = "0 = 没有增量，期望包序号正确";
             // 
             // panelTS2
             // 
@@ -361,7 +361,7 @@
             this.btnCopyImageToClipboard.Name = "btnCopyImageToClipboard";
             this.btnCopyImageToClipboard.Size = new System.Drawing.Size(97, 61);
             this.btnCopyImageToClipboard.TabIndex = 9;
-            this.btnCopyImageToClipboard.Text = "Copy Image To Clipboard";
+            this.btnCopyImageToClipboard.Text = "复制图像到剪贴板";
             this.btnCopyImageToClipboard.UseVisualStyleBackColor = true;
             this.btnCopyImageToClipboard.Click += new System.EventHandler(this.btnCopyImageToClipboard_Click);
             // 
@@ -383,7 +383,7 @@
             this.btnCopyToClipboard.Name = "btnCopyToClipboard";
             this.btnCopyToClipboard.Size = new System.Drawing.Size(97, 61);
             this.btnCopyToClipboard.TabIndex = 8;
-            this.btnCopyToClipboard.Text = "Copy Text To Clipboard";
+            this.btnCopyToClipboard.Text = "复制文本到剪贴板";
             this.btnCopyToClipboard.UseVisualStyleBackColor = true;
             this.btnCopyToClipboard.Click += new System.EventHandler(this.btnCopyToClipboard_Click);
             // 
@@ -412,7 +412,7 @@
             this.Name = "frmSeqLog";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "SEQ Log";
+            this.Text = "SEQ 日志";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmSeqLog_FormClosing);
             this.tabMain.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

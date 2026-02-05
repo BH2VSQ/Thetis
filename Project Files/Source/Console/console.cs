@@ -47292,6 +47292,11 @@ namespace Thetis
             else
             {
                 RestoreEnglishMenuText();
+
+                // keep language selector fully English in English mode
+                languageToolStripMenuItem.Text = "Language";
+                languageEnglishToolStripMenuItem.Text = "English";
+                languageChineseToolStripMenuItem.Text = "Chinese";
             }
 
             languageEnglishToolStripMenuItem.Checked = language == UiLanguage.English;
@@ -47348,29 +47353,8 @@ namespace Thetis
             if (_menuZhCnByEnglishText.TryGetValue(englishText, out string exactMatch))
                 return exactMatch;
 
-            string text = englishText;
-            text = text.Replace("Setup", "设置");
-            text = text.Replace("Settings", "设置");
-            text = text.Replace("Display", "显示");
-            text = text.Replace("Controls", "控制");
-            text = text.Replace("Control", "控制");
-            text = text.Replace("Database", "数据库");
-            text = text.Replace("Manager", "管理");
-            text = text.Replace("Memory", "记忆");
-            text = text.Replace("Wave", "波形");
-            text = text.Replace("Equalizer", "均衡器");
-            text = text.Replace("Filter", "滤波");
-            text = text.Replace("Band", "波段");
-            text = text.Replace("Mode", "模式");
-            text = text.Replace("Linearity", "线性");
-            text = text.Replace("Finder", "查找");
-            text = text.Replace("About", "关于");
-            text = text.Replace("Language", "语言");
-            text = text.Replace("Chinese", "中文");
-            text = text.Replace("ByPass", "旁路");
-            text = text.Replace("Bypass", "旁路");
-
-            return text;
+            // avoid mixed Chinese/English words in one menu item
+            return englishText;
         }
 
         private IEnumerable<ToolStripItem> EnumerateAllMenuItems()

@@ -977,7 +977,7 @@
             this.label_ALEX_2_To_RX.Name = "label_ALEX_2_To_RX";
             this.label_ALEX_2_To_RX.Size = new System.Drawing.Size(39, 15);
             this.label_ALEX_2_To_RX.TabIndex = 378;
-            this.label_ALEX_2_To_RX.Text = "To RX";
+            this.label_ALEX_2_To_RX.Text = "到 RX";
             // 
             // label_ALEX_2_LPF
             // 
@@ -1057,7 +1057,7 @@
             this.label_ALEX_To_RX.Name = "label_ALEX_To_RX";
             this.label_ALEX_To_RX.Size = new System.Drawing.Size(39, 15);
             this.label_ALEX_To_RX.TabIndex = 370;
-            this.label_ALEX_To_RX.Text = "To RX";
+            this.label_ALEX_To_RX.Text = "到 RX";
             // 
             // label_MERCURY_FPGA
             // 

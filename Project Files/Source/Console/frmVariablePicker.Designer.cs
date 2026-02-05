@@ -52,7 +52,7 @@
             this.btnCancel.Selectable = true;
             this.btnCancel.Size = new System.Drawing.Size(52, 23);
             this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -65,7 +65,7 @@
             this.btnSelect.Selectable = true;
             this.btnSelect.Size = new System.Drawing.Size(52, 23);
             this.btnSelect.TabIndex = 3;
-            this.btnSelect.Text = "Select";
+            this.btnSelect.Text = "选择";
             this.btnSelect.UseVisualStyleBackColor = true;
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
@@ -78,7 +78,7 @@
             this.btnDefault.Selectable = true;
             this.btnDefault.Size = new System.Drawing.Size(52, 23);
             this.btnDefault.TabIndex = 5;
-            this.btnDefault.Text = "Default";
+            this.btnDefault.Text = "默认";
             this.btnDefault.UseVisualStyleBackColor = true;
             this.btnDefault.Click += new System.EventHandler(this.btnDefault_Click);
             // 
@@ -94,7 +94,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmVariablePicker";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Variable Picker";
+            this.Text = "变量选择器";
             this.ResumeLayout(false);
 
         }

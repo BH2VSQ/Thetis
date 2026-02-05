@@ -60,7 +60,7 @@
             this.radSigAvg.TabIndex = 1;
             this.radSigAvg.TabStop = true;
             this.radSigAvg.Text = "Avg";
-            this.toolTip1.SetToolTip(this.radSigAvg, "Signal Average");
+            this.toolTip1.SetToolTip(this.radSigAvg, "Signal 平均");
             this.radSigAvg.UseVisualStyleBackColor = true;
             this.radSigAvg.CheckedChanged += new System.EventHandler(this.radSigAvg_CheckedChanged);
             // 

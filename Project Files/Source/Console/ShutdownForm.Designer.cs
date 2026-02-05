@@ -58,7 +58,7 @@
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Closing";
+            this.Text = "关闭中";
             this.ResumeLayout(false);
             this.PerformLayout();
 

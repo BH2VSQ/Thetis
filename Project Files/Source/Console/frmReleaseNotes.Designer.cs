@@ -41,7 +41,7 @@
             this.btnClose.Selectable = true;
             this.btnClose.Size = new System.Drawing.Size(112, 30);
             this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "&Close";
+            this.btnClose.Text = "&关闭";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -72,7 +72,7 @@
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Release Notes";
+            this.Text = "更新说明";
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmReleaseNotes_FormClosing);
             this.ResumeLayout(false);

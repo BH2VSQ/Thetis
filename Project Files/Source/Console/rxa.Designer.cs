@@ -254,7 +254,7 @@
             this.labelTS3.Name = "labelTS3";
             this.labelTS3.Size = new System.Drawing.Size(34, 13);
             this.labelTS3.TabIndex = 5;
-            this.labelTS3.Text = "Mode";
+            this.labelTS3.Text = "模式";
             // 
             // udRXAVolume
             // 
@@ -303,7 +303,7 @@
             this.labelTS1.Name = "labelTS1";
             this.labelTS1.Size = new System.Drawing.Size(57, 13);
             this.labelTS1.TabIndex = 1;
-            this.labelTS1.Text = "Frequency";
+            this.labelTS1.Text = "频率";
             // 
             // udRXAFreq
             // 

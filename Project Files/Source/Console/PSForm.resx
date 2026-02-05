@@ -136,7 +136,7 @@
   <data name="pbWarningSetPk.ToolTip" xml:space="preserve">
     <value>The SetPk value is different to that expected for the hardware.
 Poor performance of PS might result. Go into [Advanced]
-and use the [Default] button.
+and use the [默认] button.
 
 If this difference is expected then ignore this warning.</value>
   </data>
