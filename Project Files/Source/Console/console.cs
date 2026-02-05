@@ -144,7 +144,6 @@ namespace Thetis
             { "Include Borders", "包含边框" },
             { "System", "系统" },
             { "Thetis Only", "仅 Thetis" },
-            { "ByPass", "旁路" },
             { "Bypass", "旁路" }
         };
 
