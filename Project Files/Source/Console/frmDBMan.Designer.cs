@@ -109,7 +109,7 @@
             // 
             // colDesc
             // 
-            this.colDesc.Text = "Description";
+            this.colDesc.Text = "描述";
             this.colDesc.Width = 128;
             // 
             // colHardware
@@ -140,7 +140,7 @@
             // 
             // colVersion
             // 
-            this.colVersion.Text = "Version";
+            this.colVersion.Text = "版本";
             // 
             // colFolder
             // 
@@ -172,7 +172,7 @@
             // 
             // colDescription
             // 
-            this.colDescription.Text = "Description";
+            this.colDescription.Text = "描述";
             this.colDescription.Width = 90;
             // 
             // colTimeDate
@@ -326,7 +326,7 @@
             this.btnRemoveBackup.Selectable = true;
             this.btnRemoveBackup.Size = new System.Drawing.Size(42, 42);
             this.btnRemoveBackup.TabIndex = 5;
-            this.toolTip1.SetToolTip(this.btnRemoveBackup, "Remove the selected backup");
+            this.toolTip1.SetToolTip(this.btnRemoveBackup, "移除 the selected backup");
             this.btnRemoveBackup.UseVisualStyleBackColor = true;
             this.btnRemoveBackup.Click += new System.EventHandler(this.btnRemoveBackup_Click);
             // 
@@ -378,7 +378,7 @@
             this.btnRemoveDB.Selectable = true;
             this.btnRemoveDB.Size = new System.Drawing.Size(42, 42);
             this.btnRemoveDB.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.btnRemoveDB, "Remove the database");
+            this.toolTip1.SetToolTip(this.btnRemoveDB, "移除 the database");
             this.btnRemoveDB.UseVisualStyleBackColor = true;
             this.btnRemoveDB.Click += new System.EventHandler(this.btnRemoveDB_Click);
             // 
@@ -453,7 +453,7 @@
             this.lblDabaseBackups_active_selected.Name = "lblDabaseBackups_active_selected";
             this.lblDabaseBackups_active_selected.Size = new System.Drawing.Size(114, 13);
             this.lblDabaseBackups_active_selected.TabIndex = 9;
-            this.lblDabaseBackups_active_selected.Text = "Database Backups";
+            this.lblDabaseBackups_active_selected.Text = "数据库 Backups";
             // 
             // picTick
             // 
@@ -502,7 +502,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(720, 640);
             this.Name = "frmDBMan";
-            this.Text = "Database Manager";
+            this.Text = "数据库管理";
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDBMan_FormClosing);
             this.Shown += new System.EventHandler(this.frmDBMan_Shown);

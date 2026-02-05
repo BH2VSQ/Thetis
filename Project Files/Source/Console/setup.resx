@@ -150,7 +150,7 @@ Unchecked, a stored entry will allow that radio to have any protocol version.
 The added entry will be update accordingly once connected.</value>
   </data>
   <data name="chkInformHardwareP2Ports.ToolTip" xml:space="preserve">
-    <value>Default P2 UDP ports on the radio are:
+    <value>默认 P2 UDP ports on the radio are:
 a) Port 1024 into the radio - discovery and general port, this can not be changed
 b) Others into the radio 1025-1029 - these can be changed
 c) The radio will also use its own output ports 1024-1041 which direct data to the single PC listen port - these can be changed
@@ -269,7 +269,7 @@ Reboot after the change is made.</value>
 - Int32LSB sample format (24 bit samples, left aligned in 32 bit little-endian integers)
 
 - Protocol 1 is supported but performance may be degraded compared to Protocol 2
-- Remove any previous cmASIO settings from HKEY_LOCAL_MACHINE\SOFTWARE\OpenHPSDR\Thetis-x64
+- 移除 any previous cmASIO settings from HKEY_LOCAL_MACHINE\SOFTWARE\OpenHPSDR\Thetis-x64
 - This now uses HKEY_CURRENT_USER\SOFTWARE\OpenHPSDR\Thetis-x64</value>
   </data>
   <data name="chkPurgeBuffers.ToolTip" xml:space="preserve">
@@ -320,7 +320,7 @@ the appearance of the filter passband display.</value>
 </value>
   </data>
   <data name="comboDSPNOBmode.ToolTip" xml:space="preserve">
-    <value>NB2 mode: Set mode in which NB2 deals with impulses
+    <value>NB2 mode: 设置 mode in which NB2 deals with impulses
 Zero:  Go to zero amplitude during the impulse(s)
 Sample &amp; Hold:  Sample beginning signal amplitude and hold during impulse(s)
 Mean-Hold:  Hold during impulse(s) at mean of beginning and ending signal values
@@ -453,8 +453,8 @@ of us there and you can interact with many channles and actively view the
 only stored in a TX profile. This can include things
 like TX EQ, CFC, buffer sizes, VAC state (on/off) and
 many others. You need to save the TX profile so that
-these settings are stored. Use the Transmit-&gt;Profile Save
-button, or use the Auto Save TX Profile options on the
+these settings are stored. Use the Transmit-&gt;Profile 保存
+button, or use the Auto 保存 TX Profile options on the
 Transmit tab</value>
   </data>
   <metadata name="timer_VAC_Monitor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

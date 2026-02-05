@@ -301,7 +301,7 @@
 		<value>119</value>
 	</data>
 	<data name="ptbCWAPFFreq.ToolTip" xml:space="preserve">
-    <value>Sets the CW APF Frequency.</value>
+    <value>Sets the CW APF 频率.</value>
   </data>
 	<data name="&gt;&gt;ptbCWAPFFreq.Name" xml:space="preserve">
     <value>ptbCWAPFFreq</value>
@@ -385,7 +385,7 @@
     <value>Show CW 0 Line</value>
   </data>
 	<data name="chkShowCWZero.ToolTip" xml:space="preserve">
-    <value>Display CW Zero Line</value>
+    <value>显示 CW Zero Line</value>
   </data>
 	<data name="&gt;&gt;chkShowCWZero.Name" xml:space="preserve">
     <value>chkShowCWZero</value>
@@ -550,7 +550,7 @@
     <value>Show TX Freq</value>
   </data>
 	<data name="chkShowTXCWFreq.ToolTip" xml:space="preserve">
-    <value>Shows the TX Filter on the display when in Panadapter mode</value>
+    <value>Shows the TX 滤波 on the display when in Panadapter mode</value>
   </data>
 	<data name="&gt;&gt;chkShowTXCWFreq.Name" xml:space="preserve">
     <value>chkShowTXCWFreq</value>
@@ -1318,7 +1318,7 @@
 		<value>Right</value>
 	</data>
 	<data name="udFilterHigh.ToolTip" xml:space="preserve">
-    <value>High Filter</value>
+    <value>High 滤波</value>
   </data>
 	<data name="&gt;&gt;udFilterHigh.Name" xml:space="preserve">
     <value>udFilterHigh</value>
@@ -1351,7 +1351,7 @@
 		<value>Right</value>
 	</data>
 	<data name="udFilterLow.ToolTip" xml:space="preserve">
-    <value>Low Filter</value>
+    <value>Low 滤波</value>
   </data>
 	<data name="&gt;&gt;udFilterLow.Name" xml:space="preserve">
     <value>udFilterLow</value>
@@ -1513,7 +1513,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkRX2Squelch.ToolTip" xml:space="preserve">
-    <value>Squelch Enable</value>
+    <value>Squelch 启用</value>
   </data>
 	<data name="&gt;&gt;chkRX2Squelch.Name" xml:space="preserve">
     <value>chkRX2Squelch</value>
@@ -1729,7 +1729,7 @@
 		<value>MiddleLeft</value>
 	</data>
 	<data name="lblRX2AGC.ToolTip" xml:space="preserve">
-    <value>AGC Mode</value>
+    <value>AGC 模式</value>
   </data>
 	<data name="&gt;&gt;lblRX2AGC.Name" xml:space="preserve">
     <value>lblRX2AGC</value>
@@ -1774,7 +1774,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkRX2ANF.ToolTip" xml:space="preserve">
-    <value>Automatic Notch Filter</value>
+    <value>Automatic Notch 滤波</value>
   </data>
 	<data name="&gt;&gt;chkRX2ANF.Name" xml:space="preserve">
     <value>chkRX2ANF</value>
@@ -1804,7 +1804,7 @@
 		<value>94</value>
 	</data>
 	<data name="comboRX2AGC.ToolTip" xml:space="preserve">
-    <value>Automatic Gain Control Mode Setting</value>
+    <value>Automatic Gain 控制 模式 Setting</value>
   </data>
 	<data name="&gt;&gt;comboRX2AGC.Name" xml:space="preserve">
     <value>comboRX2AGC</value>
@@ -1984,7 +1984,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkMON.ToolTip" xml:space="preserve">
-    <value>Monitor - Enabled TX Audio to come through the speakers.</value>
+    <value>Monitor - 启用 TX Audio to come through the speakers.</value>
   </data>
 	<data name="&gt;&gt;chkMON.Name" xml:space="preserve">
     <value>chkMON</value>
@@ -2071,7 +2071,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkRX2SR.ToolTip" xml:space="preserve">
-    <value>Receive Display on MOX.</value>
+    <value>Receive 显示 on MOX.</value>
   </data>
 	<data name="&gt;&gt;chkRX2SR.Name" xml:space="preserve">
     <value>chkRX2SR</value>
@@ -2212,7 +2212,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chk2TONE.ToolTip" xml:space="preserve">
-    <value>This control outputs two tones using a saved PWR setting (adjustable only while 2TON is active). Configured in TEST section of Setup.</value>
+    <value>This control outputs two tones using a saved PWR setting (adjustable only while 2TON is active). Configured in TEST section of 设置.</value>
   </data>
 	<data name="&gt;&gt;chk2TONE.Name" xml:space="preserve">
     <value>chk2TONE</value>
@@ -2257,7 +2257,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkFWCATUBypass.ToolTip" xml:space="preserve">
-    <value>Activates PureSignal 2.0 Auto-Calibrate Mode</value>
+    <value>Activates PureSignal 2.0 Auto-Calibrate 模式</value>
   </data>
 	<data name="&gt;&gt;chkFWCATUBypass.Name" xml:space="preserve">
     <value>chkFWCATUBypass</value>
@@ -2281,7 +2281,7 @@
     <value>Bypass</value>
   </data>
 	<data name="comboTuneMode.Items1" xml:space="preserve">
-    <value>Memory</value>
+    <value>记忆</value>
   </data>
 	<data name="comboTuneMode.Items2" xml:space="preserve">
     <value>Full</value>
@@ -2329,7 +2329,7 @@
 		<value>Right</value>
 	</data>
 	<data name="udTXFilterLow.ToolTip" xml:space="preserve">
-    <value>TX Low Filter Cutoff</value>
+    <value>TX Low 滤波 Cutoff</value>
   </data>
 	<data name="&gt;&gt;udTXFilterLow.Name" xml:space="preserve">
     <value>udTXFilterLow</value>
@@ -2359,7 +2359,7 @@
 		<value>Right</value>
 	</data>
 	<data name="udTXFilterHigh.ToolTip" xml:space="preserve">
-    <value>TX High Filter Cutoff</value>
+    <value>TX High 滤波 Cutoff</value>
   </data>
 	<data name="&gt;&gt;udTXFilterHigh.Name" xml:space="preserve">
     <value>udTXFilterHigh</value>
@@ -2404,7 +2404,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkMicMute.ToolTip" xml:space="preserve">
-    <value>Mic Enable</value>
+    <value>Mic 启用</value>
   </data>
 	<data name="&gt;&gt;chkMicMute.Name" xml:space="preserve">
     <value>chkMicMute</value>
@@ -2449,7 +2449,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkShowTXFilter.ToolTip" xml:space="preserve">
-    <value>Shows the TX Filter on the display when in Panadapter mode</value>
+    <value>Shows the TX 滤波 on the display when in Panadapter mode</value>
   </data>
 	<data name="&gt;&gt;chkShowTXFilter.Name" xml:space="preserve">
     <value>chkShowTXFilter</value>
@@ -2494,7 +2494,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkTXEQ.ToolTip" xml:space="preserve">
-    <value>Enable TX EQ</value>
+    <value>启用 TX EQ</value>
   </data>
 	<data name="&gt;&gt;chkTXEQ.Name" xml:space="preserve">
     <value>chkTXEQ</value>
@@ -2539,7 +2539,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkRXEQ.ToolTip" xml:space="preserve">
-    <value>Enable RX EQ</value>
+    <value>启用 RX EQ</value>
   </data>
 	<data name="&gt;&gt;chkRXEQ.Name" xml:space="preserve">
     <value>chkRXEQ</value>
@@ -2584,7 +2584,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkCPDR.ToolTip" xml:space="preserve">
-    <value>Compressor Enable</value>
+    <value>Compressor 启用</value>
   </data>
 	<data name="&gt;&gt;chkCPDR.Name" xml:space="preserve">
     <value>chkCPDR</value>
@@ -2629,7 +2629,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkVOX.ToolTip" xml:space="preserve">
-    <value>Vox Enable</value>
+    <value>Vox 启用</value>
   </data>
 	<data name="&gt;&gt;chkVOX.Name" xml:space="preserve">
     <value>chkVOX</value>
@@ -2896,7 +2896,7 @@
 		<value>110</value>
 	</data>
 	<data name="comboRX2Band.ToolTip" xml:space="preserve">
-    <value>Display Mode Selection</value>
+    <value>显示 模式 Selection</value>
   </data>
 	<data name="&gt;&gt;comboRX2Band.Name" xml:space="preserve">
     <value>comboRX2Band</value>
@@ -2965,7 +2965,7 @@
 		<value>Right</value>
 	</data>
 	<data name="udRX2FilterHigh.ToolTip" xml:space="preserve">
-    <value>High Filter Cutoff</value>
+    <value>High 滤波 Cutoff</value>
   </data>
 	<data name="&gt;&gt;udRX2FilterHigh.Name" xml:space="preserve">
     <value>udRX2FilterHigh</value>
@@ -2995,7 +2995,7 @@
 		<value>Right</value>
 	</data>
 	<data name="udRX2FilterLow.ToolTip" xml:space="preserve">
-    <value>Low Filter Cutoff</value>
+    <value>Low 滤波 Cutoff</value>
   </data>
 	<data name="&gt;&gt;udRX2FilterLow.Name" xml:space="preserve">
     <value>udRX2FilterLow</value>
@@ -3355,7 +3355,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="radRX2ModeFMN.ToolTip" xml:space="preserve">
-    <value>Frequency Modulation Narrow</value>
+    <value>频率 Modulation Narrow</value>
   </data>
 	<data name="&gt;&gt;radRX2ModeFMN.Name" xml:space="preserve">
     <value>radRX2ModeFMN</value>
@@ -3400,7 +3400,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="radRX2ModeDIGU.ToolTip" xml:space="preserve">
-    <value>Digital Mode Upper Sideband</value>
+    <value>Digital 模式 Upper Sideband</value>
   </data>
 	<data name="&gt;&gt;radRX2ModeDIGU.Name" xml:space="preserve">
     <value>radRX2ModeDIGU</value>
@@ -3490,7 +3490,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="radRX2ModeDIGL.ToolTip" xml:space="preserve">
-    <value>Digital Mode Lower Sideband</value>
+    <value>Digital 模式 Lower Sideband</value>
   </data>
 	<data name="&gt;&gt;radRX2ModeDIGL.Name" xml:space="preserve">
     <value>radRX2ModeDIGL</value>
@@ -3622,7 +3622,7 @@
 		<value>13</value>
 	</data>
 	<data name="comboRX2DisplayMode.ToolTip" xml:space="preserve">
-    <value>Display Mode Selection</value>
+    <value>显示 模式 Selection</value>
   </data>
 	<data name="&gt;&gt;comboRX2DisplayMode.Name" xml:space="preserve">
     <value>comboRX2DisplayMode</value>
@@ -3790,7 +3790,7 @@
 		<value>13</value>
 	</data>
 	<data name="comboDisplayMode.ToolTip" xml:space="preserve">
-    <value>Display Mode Selection</value>
+    <value>显示 模式 Selection</value>
   </data>
 	<data name="&gt;&gt;comboDisplayMode.Name" xml:space="preserve">
     <value>comboDisplayMode</value>
@@ -3832,7 +3832,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkDisplayAVG.ToolTip" xml:space="preserve">
-    <value>Average - Display the signal averaged over time.</value>
+    <value>平均 - 显示 the signal averaged over time.</value>
   </data>
 	<data name="&gt;&gt;chkDisplayAVG.Name" xml:space="preserve">
     <value>chkDisplayAVG</value>
@@ -4060,7 +4060,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkANF.ToolTip" xml:space="preserve">
-    <value>Automatic Notch Filter</value>
+    <value>Automatic Notch 滤波</value>
   </data>
 	<data name="&gt;&gt;chkANF.Name" xml:space="preserve">
     <value>chkANF</value>
@@ -4183,7 +4183,7 @@
 		<value>BottomCenter</value>
 	</data>
 	<data name="btnRITReset.ToolTip" xml:space="preserve">
-    <value>Clear RIT</value>
+    <value>清除 RIT</value>
   </data>
 	<data name="&gt;&gt;btnRITReset.Name" xml:space="preserve">
     <value>btnRITReset</value>
@@ -4222,7 +4222,7 @@
 		<value>BottomCenter</value>
 	</data>
 	<data name="btnXITReset.ToolTip" xml:space="preserve">
-    <value>Clear XIT</value>
+    <value>清除 XIT</value>
   </data>
 	<data name="&gt;&gt;btnXITReset.Name" xml:space="preserve">
     <value>btnXITReset</value>
@@ -4552,7 +4552,7 @@
 		<value>31</value>
 	</data>
 	<data name="comboAGC.ToolTip" xml:space="preserve">
-    <value>Automatic Gain Control Mode Setting</value>
+    <value>Automatic Gain 控制 模式 Setting</value>
   </data>
 	<data name="&gt;&gt;comboAGC.Name" xml:space="preserve">
     <value>comboAGC</value>
@@ -4588,7 +4588,7 @@
 		<value>TopCenter</value>
 	</data>
 	<data name="lblAGC.ToolTip" xml:space="preserve">
-    <value>AGC Mode</value>
+    <value>AGC 模式</value>
   </data>
 	<data name="&gt;&gt;lblAGC.Name" xml:space="preserve">
     <value>lblAGC</value>
@@ -4699,7 +4699,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkVAC1.ToolTip" xml:space="preserve">
-    <value>Enable VAC1</value>
+    <value>启用 VAC1</value>
   </data>
 	<data name="&gt;&gt;chkVAC1.Name" xml:space="preserve">
     <value>chkVAC1</value>
@@ -4828,7 +4828,7 @@
 		<value>60</value>
 	</data>
 	<data name="comboVACSampleRate.ToolTip" xml:space="preserve">
-    <value>Samples per second.  Set to match the third party software program.</value>
+    <value>Samples per second.  设置 to match the third party software program.</value>
   </data>
 	<data name="&gt;&gt;comboVACSampleRate.Name" xml:space="preserve">
     <value>comboVACSampleRate</value>
@@ -5188,7 +5188,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="radModeFMN.ToolTip" xml:space="preserve">
-    <value>Frequency Modulation Narrow</value>
+    <value>频率 Modulation Narrow</value>
   </data>
 	<data name="&gt;&gt;radModeFMN.Name" xml:space="preserve">
     <value>radModeFMN</value>
@@ -5233,7 +5233,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="radModeDIGU.ToolTip" xml:space="preserve">
-    <value>Digital Mode Upper Sideband</value>
+    <value>Digital 模式 Upper Sideband</value>
   </data>
 	<data name="&gt;&gt;radModeDIGU.Name" xml:space="preserve">
     <value>radModeDIGU</value>
@@ -5323,7 +5323,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="radModeDIGL.ToolTip" xml:space="preserve">
-    <value>Digital Mode Lower Sideband</value>
+    <value>Digital 模式 Lower Sideband</value>
   </data>
 	<data name="&gt;&gt;radModeDIGL.Name" xml:space="preserve">
     <value>radModeDIGL</value>
@@ -5554,7 +5554,7 @@
 		<value>62</value>
 	</data>
 	<data name="comboMeterTXMode.ToolTip" xml:space="preserve">
-    <value>Multimeter Mode Selection</value>
+    <value>Multimeter 模式 Selection</value>
   </data>
 	<data name="&gt;&gt;comboMeterTXMode.Name" xml:space="preserve">
     <value>comboMeterTXMode</value>
@@ -5584,7 +5584,7 @@
 		<value>3</value>
 	</data>
 	<data name="comboMeterRXMode.ToolTip" xml:space="preserve">
-    <value>Multimeter Mode Selection</value>
+    <value>Multimeter 模式 Selection</value>
   </data>
 	<data name="&gt;&gt;comboMeterRXMode.Name" xml:space="preserve">
     <value>comboMeterRXMode</value>
@@ -5629,7 +5629,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkSquelch.ToolTip" xml:space="preserve">
-    <value>Squelch Enable</value>
+    <value>Squelch 启用</value>
   </data>
 	<data name="&gt;&gt;chkSquelch.Name" xml:space="preserve">
     <value>chkSquelch</value>
@@ -5668,7 +5668,7 @@
     <value>Restore</value>
   </data>
 	<data name="btnMemoryQuickRestore.ToolTip" xml:space="preserve">
-    <value>Quick Restore (Freq, Filter, Mode)</value>
+    <value>Quick Restore (Freq, 滤波, 模式)</value>
   </data>
 	<data name="&gt;&gt;btnMemoryQuickRestore.Name" xml:space="preserve">
     <value>btnMemoryQuickRestore</value>
@@ -5704,13 +5704,13 @@
 		<value>75</value>
 	</data>
 	<data name="btnMemoryQuickSave.Text" xml:space="preserve">
-    <value>Save</value>
+    <value>保存</value>
   </data>
 	<data name="btnMemoryQuickSave.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>TopCenter</value>
 	</data>
 	<data name="btnMemoryQuickSave.ToolTip" xml:space="preserve">
-    <value>Quick Save (Freq, Filter, Mode)</value>
+    <value>Quick 保存 (Freq, 滤波, 模式)</value>
   </data>
 	<data name="&gt;&gt;btnMemoryQuickSave.Name" xml:space="preserve">
     <value>btnMemoryQuickSave</value>
@@ -5737,7 +5737,7 @@
     <value>1234.567890</value>
   </data>
 	<data name="txtMemoryQuick.ToolTip" xml:space="preserve">
-    <value>Quick Save Frequency</value>
+    <value>Quick 保存 频率</value>
   </data>
 	<data name="&gt;&gt;txtMemoryQuick.Name" xml:space="preserve">
     <value>txtMemoryQuick</value>
@@ -5983,7 +5983,7 @@
 		<value>79</value>
 	</data>
 	<data name="comboDisplayModeTop.ToolTip" xml:space="preserve">
-    <value>Display Mode Selection</value>
+    <value>显示 模式 Selection</value>
   </data>
 	<data name="&gt;&gt;comboDisplayModeTop.Name" xml:space="preserve">
     <value>comboDisplayModeTop</value>
@@ -6019,7 +6019,7 @@
 		<value>80</value>
 	</data>
 	<data name="comboDisplayModeBottom.ToolTip" xml:space="preserve">
-    <value>Display Mode Selection</value>
+    <value>显示 模式 Selection</value>
   </data>
 	<data name="&gt;&gt;comboDisplayModeBottom.Name" xml:space="preserve">
     <value>comboDisplayModeBottom</value>
@@ -6049,7 +6049,7 @@
 		<value>3</value>
 	</data>
 	<data name="comboRX2MeterMode.ToolTip" xml:space="preserve">
-    <value>Multimeter Mode Selection</value>
+    <value>Multimeter 模式 Selection</value>
   </data>
 	<data name="&gt;&gt;comboRX2MeterMode.Name" xml:space="preserve">
     <value>comboRX2MeterMode</value>
@@ -6094,7 +6094,7 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkRX2DisplayAVG.ToolTip" xml:space="preserve">
-    <value>Average - Display the signal averaged over time.</value>
+    <value>平均 - 显示 the signal averaged over time.</value>
   </data>
 	<data name="&gt;&gt;chkRX2DisplayAVG.Name" xml:space="preserve">
     <value>chkRX2DisplayAVG</value>
@@ -6184,8 +6184,8 @@
 		<value>MiddleCenter</value>
 	</data>
 	<data name="radBandGEN.ToolTip" xml:space="preserve">
-    <value>Launch SWL Band and Band Stack.
-CTRL + Right Click on any Band Button to add Band Stack.</value>
+    <value>Launch SWL 波段 and 波段 Stack.
+CTRL + Right Click on any 波段 Button to add 波段 Stack.</value>
   </data>
 	<data name="&gt;&gt;radBandGEN.Name" xml:space="preserve">
     <value>radBandGEN</value>
@@ -6932,10 +6932,10 @@ CTRL + Right Click on any Band Button to add Band Stack.</value>
 		<value>126</value>
 	</data>
 	<data name="btnFMMemory.Text" xml:space="preserve">
-    <value>Memory</value>
+    <value>记忆</value>
   </data>
 	<data name="btnFMMemory.ToolTip" xml:space="preserve">
-    <value>Opens the  Memory Form</value>
+    <value>Opens the  记忆 Form</value>
   </data>
 	<data name="&gt;&gt;btnFMMemory.Name" xml:space="preserve">
     <value>btnFMMemory</value>
@@ -6980,7 +6980,7 @@ CTRL + Right Click on any Band Button to add Band Stack.</value>
 		<value>TopCenter</value>
 	</data>
 	<data name="chkFMCTCSS.ToolTip" xml:space="preserve">
-    <value>Enable CTCSS Tones</value>
+    <value>启用 CTCSS Tones</value>
   </data>
 	<data name="&gt;&gt;chkFMCTCSS.Name" xml:space="preserve">
     <value>chkFMCTCSS</value>
@@ -7022,7 +7022,7 @@ CTRL + Right Click on any Band Button to add Band Stack.</value>
 		<value>TopCenter</value>
 	</data>
 	<data name="btnFMMemoryUp.ToolTip" xml:space="preserve">
-    <value>Selects the next Channel on the Memory Form list</value>
+    <value>Selects the next Channel on the 记忆 Form list</value>
   </data>
 	<data name="&gt;&gt;btnFMMemoryUp.Name" xml:space="preserve">
     <value>btnFMMemoryUp</value>
@@ -7064,7 +7064,7 @@ CTRL + Right Click on any Band Button to add Band Stack.</value>
 		<value>TopCenter</value>
 	</data>
 	<data name="btnFMMemoryDown.ToolTip" xml:space="preserve">
-    <value>Selects the previous Channel on the Memory Form list</value>
+    <value>Selects the previous Channel on the 记忆 Form list</value>
   </data>
 	<data name="&gt;&gt;btnFMMemoryDown.Name" xml:space="preserve">
     <value>btnFMMemoryDown</value>
@@ -7292,7 +7292,7 @@ CTRL + Right Click on any Band Button to add Band Stack.</value>
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkTNF.ToolTip" xml:space="preserve">
-    <value>Turns the Multi Tracking Notch Filter(s) on/off</value>
+    <value>Turns the Multi Tracking Notch 滤波(s) on/off</value>
   </data>
 	<data name="&gt;&gt;chkTNF.Name" xml:space="preserve">
     <value>chkTNF</value>
@@ -7328,7 +7328,7 @@ CTRL + Right Click on any Band Button to add Band Stack.</value>
     <value>+MNF</value>
   </data>
 	<data name="btnTNFAdd.ToolTip" xml:space="preserve">
-    <value>Add a Multi Tracking Notch Filter</value>
+    <value>添加 a Multi Tracking Notch 滤波</value>
   </data>
 	<data name="&gt;&gt;btnTNFAdd.Name" xml:space="preserve">
     <value>btnTNFAdd</value>
@@ -7370,7 +7370,7 @@ CTRL + Right Click on any Band Button to add Band Stack.</value>
 		<value>MiddleCenter</value>
 	</data>
 	<data name="chkVAC2.ToolTip" xml:space="preserve">
-    <value>Enable VAC 2</value>
+    <value>启用 VAC 2</value>
   </data>
 	<data name="&gt;&gt;chkVAC2.Name" xml:space="preserve">
     <value>chkVAC2</value>
@@ -7484,7 +7484,7 @@ CTRL + Right Click on any Band Button to add Band Stack.</value>
 		<value>83</value>
 	</data>
 	<data name="lblBandStack.Text" xml:space="preserve">
-    <value>Band Stack</value>
+    <value>波段 Stack</value>
   </data>
 	<data name="lblBandStack.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>BottomRight</value>
@@ -7524,7 +7524,7 @@ CTRL + Right Click on any Band Button to add Band Stack.</value>
 		<value>Center</value>
 	</data>
 	<data name="regBandStackCurrentEntry.ToolTip" xml:space="preserve">
-    <value>Current Band Stack Index #</value>
+    <value>Current 波段 Stack Index #</value>
   </data>
 	<data name="&gt;&gt;regBandStackCurrentEntry.Name" xml:space="preserve">
     <value>regBandStackCurrentEntry</value>
@@ -7557,8 +7557,8 @@ CTRL + Right Click on any Band Button to add Band Stack.</value>
 		<value>Center</value>
 	</data>
 	<data name="regBandStackTotalEntries.ToolTip" xml:space="preserve">
-    <value>Total Band Stack Registers for this Band
-Ctrl + Left Click on any Band Button adds to Stack</value>
+    <value>Total 波段 Stack Registers for this 波段
+Ctrl + Left Click on any 波段 Button adds to Stack</value>
   </data>
 	<data name="&gt;&gt;regBandStackTotalEntries.Name" xml:space="preserve">
     <value>regBandStackTotalEntries</value>
@@ -8668,7 +8668,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>64</value>
 	</data>
 	<data name="ptbVACRXGain.ToolTip" xml:space="preserve">
-    <value>Controls the gain applied to the RX audio before it is sent to the third party application.</value>
+    <value>控制 the gain applied to the RX audio before it is sent to the third party application.</value>
   </data>
 	<data name="&gt;&gt;ptbVACRXGain.Name" xml:space="preserve">
     <value>ptbVACRXGain</value>
@@ -8701,7 +8701,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>65</value>
 	</data>
 	<data name="ptbVACTXGain.ToolTip" xml:space="preserve">
-    <value>Controls the gain on the audio coming from third party applications.</value>
+    <value>控制 the gain on the audio coming from third party applications.</value>
   </data>
 	<data name="&gt;&gt;ptbVACTXGain.Name" xml:space="preserve">
     <value>ptbVACTXGain</value>
@@ -8956,7 +8956,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>163, 48</value>
 	</data>
 	<data name="contextMenuStripFilterRX1.Text" xml:space="preserve">
-    <value>RX1 Filter</value>
+    <value>RX1 滤波</value>
   </data>
 	<data name="&gt;&gt;contextMenuStripFilterRX1.Name" xml:space="preserve">
     <value>contextMenuStripFilterRX1</value>
@@ -8995,7 +8995,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>148, 22</value>
 	</data>
 	<data name="toolStripNotchDelete.Text" xml:space="preserve">
-    <value>Delete</value>
+    <value>删除</value>
   </data>
 	<data name="toolStripNotchRemember.Size" type="System.Drawing.Size, System.Drawing">
 		<value>148, 22</value>
@@ -9043,7 +9043,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>172, 22</value>
 	</data>
 	<data name="setupToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Setup</value>
+    <value>设置</value>
   </data>
 	<data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
 		<value>169, 6</value>
@@ -9052,31 +9052,31 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>172, 22</value>
 	</data>
 	<data name="databaseManagerToolStripMenuItem.Text" xml:space="preserve">
-    <value>Database Manager</value>
+    <value>数据库管理</value>
   </data>
 	<data name="setupToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>49, 20</value>
 	</data>
 	<data name="setupToolStripMenuItem.Text" xml:space="preserve">
-    <value>Setup</value>
+    <value>设置</value>
   </data>
 	<data name="memoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>64, 20</value>
 	</data>
 	<data name="memoryToolStripMenuItem.Text" xml:space="preserve">
-    <value>Memory</value>
+    <value>记忆</value>
   </data>
 	<data name="waveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>48, 20</value>
 	</data>
 	<data name="waveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Wave</value>
+    <value>波形</value>
   </data>
 	<data name="equalizerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>66, 20</value>
 	</data>
 	<data name="equalizerToolStripMenuItem.Text" xml:space="preserve">
-    <value>Equalizer</value>
+    <value>均衡器</value>
   </data>
 	<data name="xVTRsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>52, 20</value>
@@ -9106,25 +9106,25 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>208, 22</value>
 	</data>
 	<data name="topControlsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Top Controls</value>
+    <value>顶部控制</value>
   </data>
 	<data name="bandControlsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>208, 22</value>
 	</data>
 	<data name="bandControlsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Band Controls</value>
+    <value>波段控制</value>
   </data>
 	<data name="modeControlsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>208, 22</value>
 	</data>
 	<data name="modeControlsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Mode Controls</value>
+    <value>模式控制</value>
   </data>
 	<data name="andromedaTopControlsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>208, 22</value>
 	</data>
 	<data name="andromedaTopControlsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Andromeda Top Controls</value>
+    <value>Andromeda 顶部控制</value>
   </data>
 	<data name="andromedaButtonBarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>208, 22</value>
@@ -9136,7 +9136,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>105, 20</value>
 	</data>
 	<data name="displayControlsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Display Controls</value>
+    <value>显示控制</value>
   </data>
 	<data name="displayControlsToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
 		<value>False</value>
@@ -9304,7 +9304,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>46, 20</value>
 	</data>
 	<data name="bandToolStripMenuItem.Text" xml:space="preserve">
-    <value>Band</value>
+    <value>波段</value>
   </data>
 	<data name="bandToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
 		<value>False</value>
@@ -9385,7 +9385,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>50, 20</value>
 	</data>
 	<data name="modeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Mode</value>
+    <value>模式</value>
   </data>
 	<data name="modeToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
 		<value>False</value>
@@ -9454,7 +9454,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>45, 20</value>
 	</data>
 	<data name="filterToolStripMenuItem.Text" xml:space="preserve">
-    <value>Filter</value>
+    <value>滤波</value>
   </data>
 	<data name="filterToolStripMenuItem.Visible" type="System.Boolean, mscorlib">
 		<value>False</value>
@@ -9541,7 +9541,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>105, 22</value>
 	</data>
 	<data name="bandToolStripMenuItem6.Text" xml:space="preserve">
-    <value>Band</value>
+    <value>波段</value>
   </data>
 	<data name="lSBToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
 		<value>101, 22</value>
@@ -9613,7 +9613,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>105, 22</value>
 	</data>
 	<data name="modeToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Mode</value>
+    <value>模式</value>
   </data>
 	<data name="kToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>95, 22</value>
@@ -9661,7 +9661,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>105, 22</value>
 	</data>
 	<data name="filterToolStripMenuItem11.Text" xml:space="preserve">
-    <value>Filter</value>
+    <value>滤波</value>
   </data>
 	<data name="nR2ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>99, 22</value>
@@ -9778,7 +9778,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
     <value>BPF-1 @ ByPass</value>
   </data>
 	<data name="BPF1ToolStripMenuItem.ToolTipText" xml:space="preserve">
-    <value>BandPass Filter #1 ByPass Mode</value>
+    <value>BandPass 滤波 #1 ByPass 模式</value>
   </data>
 	<data name="BPF2ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>158, 22</value>
@@ -9787,7 +9787,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
     <value>BPF-2 @ ByPass</value>
   </data>
 	<data name="BPF2ToolStripMenuItem.ToolTipText" xml:space="preserve">
-    <value>BandPass Filter #2 ByPass Mode</value>
+    <value>BandPass 滤波 #2 ByPass 模式</value>
   </data>
 	<data name="BPFToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>39, 20</value>
@@ -9799,13 +9799,13 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>71, 20</value>
 	</data>
 	<data name="languageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Language</value>
+    <value>语言</value>
   </data>
 	<data name="languageEnglishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>117, 22</value>
 	</data>
 	<data name="languageEnglishToolStripMenuItem.Text" xml:space="preserve">
-    <value>English</value>
+    <value>英文</value>
   </data>
 	<data name="languageChineseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
 		<value>117, 22</value>
@@ -9817,13 +9817,13 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>52, 20</value>
 	</data>
 	<data name="finderMenuItem.Text" xml:space="preserve">
-    <value>Finder</value>
+    <value>查找器</value>
   </data>
 	<data name="miAbout.Size" type="System.Drawing.Size, System.Drawing">
 		<value>52, 20</value>
 	</data>
 	<data name="miAbout.Text" xml:space="preserve">
-    <value>About</value>
+    <value>关于</value>
   </data>
 	<data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
 		<value>0, 0</value>
@@ -10057,7 +10057,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>138, 22</value>
 	</data>
 	<data name="thetisOnlyToolStripMenuItem.Text" xml:space="preserve">
-    <value>Thetis Only</value>
+    <value>仅 Thetis</value>
   </data>
 	<data name="toolStripDropDownButton_CPU.Font" type="System.Drawing.Font, System.Drawing">
 		<value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
@@ -13670,7 +13670,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>112</value>
 	</data>
 	<data name="lblRX2Band.Text" xml:space="preserve">
-    <value>VFOB Band</value>
+    <value>VFOB 波段</value>
   </data>
 	<data name="lblRX2Band.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
 		<value>MiddleCenter</value>
@@ -16388,7 +16388,7 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
 		<value>83</value>
 	</data>
 	<data name="grpDisplaySplit.Text" xml:space="preserve">
-    <value>Display Options</value>
+    <value>显示 Options</value>
   </data>
 	<data name="grpDisplaySplit.Visible" type="System.Boolean, mscorlib">
 		<value>False</value>

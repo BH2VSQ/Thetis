@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label5.Text" xml:space="preserve">
-    <value>To get started press a button or move a slider, knob or wheel on your controller.
+    <value>开始前，请按下一个按钮或移动控制器上的滑块、旋钮或滚轮。
 
-Make sure you move sliders and knobs from end to end so that the full range of the control can be recorded.
+请将滑块和旋钮从一端移动到另一端，以记录完整控制范围。
 
-When Prompted enter meaningful names for your controls, it will make mapping much easier!</value>
+出现提示时请为控件输入有意义的名称，这会让映射更容易！</value>
   </data>
   <metadata name="CatCmdIdColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -149,13 +149,13 @@ When Prompted enter meaningful names for your controls, it will make mapping muc
     <value>255, 52</value>
   </metadata>
   <data name="label7.Text" xml:space="preserve">
-    <value>You can send midi commands to your controller when some events occur.
+    <value>当某些事件发生时，你可以向控制器发送 MIDI 命令。
 
-When NOT in setup Buttons that are mapped to commands that toggle (i.e. command that have On or Off in their name ) the down event fires the first time the button is pressed, the up event fires the second time the button is pressed.
+在非设置模式下，映射到可切换命令（如名称包含 On 或 Off）的按钮：第一次按下触发 down 事件，第二次按下触发 up 事件。
 
-Example. To turn Hercules RMX right cue LED on when the button is down you would enter in the Button Down Event box:  BX247F X=will be substituted with the correct channel value. All other values MUST be in hexedecimal. Only Midi short messages can be sent.
+例如：要在按钮按下时点亮 Hercules RMX 右侧 cue LED，可在 Button Down Event 中输入：BX247F。X 会替换为正确通道值。其余值必须为十六进制，仅支持发送 MIDI 短消息。
 
-SS=Status YY=ControlId VV=Value C=channel. SSYYVV will send the current command back to the controller.</value>
+SS=状态 YY=控件ID VV=值 C=通道。SSYYVV 会把当前命令回发到控制器。</value>
   </data>
   <metadata name="controlTypesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>360, 10</value>

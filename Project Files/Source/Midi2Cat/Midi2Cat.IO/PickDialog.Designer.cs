@@ -42,7 +42,7 @@
             this.doneButton.Name = "doneButton";
             this.doneButton.Size = new System.Drawing.Size(75, 23);
             this.doneButton.TabIndex = 2;
-            this.doneButton.Text = "Done";
+            this.doneButton.Text = "完成";
             this.doneButton.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -52,7 +52,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Cancel";
+            this.button2.Text = "取消";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // promptLabel
@@ -62,7 +62,7 @@
             this.promptLabel.Name = "promptLabel";
             this.promptLabel.Size = new System.Drawing.Size(138, 13);
             this.promptLabel.TabIndex = 4;
-            this.promptLabel.Text = "Pick the mappings to export";
+            this.promptLabel.Text = "选择要导出的映射";
             // 
             // mappingsLB
             // 
@@ -88,7 +88,7 @@
             this.Name = "PickDialog";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Mapping Picker";
+            this.Text = "映射选择器";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -43,7 +43,7 @@
             this.loadButton.Name = "loadButton";
             this.loadButton.Size = new System.Drawing.Size(75, 23);
             this.loadButton.TabIndex = 2;
-            this.loadButton.Text = "Done";
+            this.loadButton.Text = "完成";
             this.loadButton.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -53,7 +53,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Mappings";
+            this.label2.Text = "映射";
             // 
             // mappingsLB
             // 
@@ -72,7 +72,7 @@
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
             this.deleteButton.TabIndex = 6;
-            this.deleteButton.Text = "Delete";
+            this.deleteButton.Text = "删除";
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
@@ -83,7 +83,7 @@
             this.renameButton.Name = "renameButton";
             this.renameButton.Size = new System.Drawing.Size(75, 23);
             this.renameButton.TabIndex = 7;
-            this.renameButton.Text = "Rename";
+            this.renameButton.Text = "重命名";
             this.renameButton.UseVisualStyleBackColor = true;
             this.renameButton.Click += new System.EventHandler(this.renameButton_Click);
             // 
@@ -115,7 +115,7 @@
             this.Name = "OrganiseDialog";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Organise Mappings";
+            this.Text = "整理映射";
             this.ResumeLayout(false);
             this.PerformLayout();
 

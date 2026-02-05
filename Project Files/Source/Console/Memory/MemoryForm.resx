@@ -122,22 +122,22 @@
   </metadata>
   <data name="dataGridView1.ToolTip" xml:space="preserve">
     <value>TO ADD A URL OR FILE HYPERLINK TO A MEMORY:
-Select a Memory (Row) with your mouse
+选择 a 记忆 (Row) with your mouse
 Drag &amp; Drop a File, or URL onto the Selected Row
-or Drag &amp; Drop directly to the Add button to create new Memory
+or Drag &amp; Drop directly to the 添加 button to create new 记忆
 
 TO USE THE HYPERLINK:
-RIGHT CLICK mouse on the Memory (Row)
+RIGHT CLICK mouse on the 记忆 (Row)
 </value>
   </data>
   <data name="MemoryRecordAdd.ToolTip" xml:space="preserve">
     <value>TO ADD A URL OR FILE HYPERLINK TO A MEMORY:
-Select a Memory (Row) with your mouse
+选择 a 记忆 (Row) with your mouse
 Drag &amp; Drop a File, or URL onto the Selected Row
-or Drag &amp; Drop directly to the Add button to create new Memory
+or Drag &amp; Drop directly to the 添加 button to create new 记忆
 
 TO USE THE HYPERLINK:
-RIGHT CLICK mouse on the Memory (Row)
+RIGHT CLICK mouse on the 记忆 (Row)
 
 </value>
   </data>
@@ -145,7 +145,7 @@ RIGHT CLICK mouse on the Memory (Row)
     <value>Highlight a memory by a single left click on a row.
 You can drag a file or URL directy onto the highlighted row to save a hyperlink.
 Right click on a highlighted row to go to the hyperlink or open the file.
-Double left click to go to that Memory Frequency/mode.
+Double left click to go to that 记忆 频率/mode.
 In Panadapter use ALT + M keys to save new memory.
 Spotter can display all your memories. (displayed in blue in Panadapter)</value>
   </data>
@@ -217,12 +217,12 @@ Spotter can display all your memories. (displayed in blue in Panadapter)</value>
   </data>
   <data name="$this.ToolTip" xml:space="preserve">
     <value>TO ADD A URL OR FILE HYPERLINK TO A MEMORY:
-Select a Memory (Row) with your mouse
+选择 a 记忆 (Row) with your mouse
 Drag &amp; Drop a File, or URL onto the Selected Row
-or Drag &amp; Drop directly to the Add button to create new Memory
+or Drag &amp; Drop directly to the 添加 button to create new 记忆
 
 TO USE THE HYPERLINK:
-RIGHT CLICK mouse on the Memory (Row)
+RIGHT CLICK mouse on the 记忆 (Row)
 </value>
   </data>
 </root>

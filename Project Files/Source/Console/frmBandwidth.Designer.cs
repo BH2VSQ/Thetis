@@ -102,7 +102,7 @@
             this.chkOnTop.Name = "chkOnTop";
             this.chkOnTop.Size = new System.Drawing.Size(62, 17);
             this.chkOnTop.TabIndex = 3;
-            this.chkOnTop.Text = "On Top";
+            this.chkOnTop.Text = "置顶";
             this.chkOnTop.UseVisualStyleBackColor = false;
             this.chkOnTop.CheckedChanged += new System.EventHandler(this.chkOnTop_CheckedChanged);
             // 

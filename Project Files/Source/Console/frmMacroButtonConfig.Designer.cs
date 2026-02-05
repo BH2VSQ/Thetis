@@ -225,7 +225,7 @@
             this.btnCancel.Selectable = true;
             this.btnCancel.Size = new System.Drawing.Size(95, 50);
             this.btnCancel.TabIndex = 38;
-            this.btnCancel.Text = "&Cancel";
+            this.btnCancel.Text = "&取消";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -238,7 +238,7 @@
             this.btnOK.Selectable = true;
             this.btnOK.Size = new System.Drawing.Size(98, 50);
             this.btnOK.TabIndex = 33;
-            this.btnOK.Text = "&OK";
+            this.btnOK.Text = "&确定";
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
