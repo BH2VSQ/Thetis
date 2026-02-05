@@ -90,9 +90,6 @@ namespace Thetis
 
         private UiLanguage _selectedUiLanguage = UiLanguage.English;
         private readonly Dictionary<string, string> _menuEnglishText = new Dictionary<string, string>();
-        private readonly Dictionary<Control, string> _controlEnglishText = new Dictionary<Control, string>();
-        private readonly Dictionary<ToolStripItem, string> _toolStripEnglishText = new Dictionary<ToolStripItem, string>();
-        private readonly System.Windows.Forms.Timer _uiLanguageSyncTimer = new System.Windows.Forms.Timer();
 
         private static readonly Dictionary<string, string> _menuZhCnText = new Dictionary<string, string>
         {
@@ -148,34 +145,6 @@ namespace Thetis
             { "System", "系统" },
             { "Thetis Only", "仅 Thetis" },
             { "Bypass", "旁路" }
-        };
-
-        private static readonly Dictionary<string, string> _uiZhCnByEnglishText = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
-        {
-            { "OK", "确定" },
-            { "Cancel", "取消" },
-            { "Apply", "应用" },
-            { "Close", "关闭" },
-            { "Save", "保存" },
-            { "Delete", "删除" },
-            { "Edit", "编辑" },
-            { "Add", "添加" },
-            { "Remove", "移除" },
-            { "Clear", "清除" },
-            { "Refresh", "刷新" },
-            { "Browse", "浏览" },
-            { "Enable", "启用" },
-            { "Disable", "禁用" },
-            { "Settings", "设置" },
-            { "Setup", "设置" },
-            { "Memory", "记忆" },
-            { "Filter", "滤波" },
-            { "Mode", "模式" },
-            { "Band", "波段" },
-            { "Display", "显示" },
-            { "Language", "语言" },
-            { "About", "关于" },
-            { "Help", "帮助" }
         };
 
         #region Variable Declarations
@@ -817,8 +786,6 @@ namespace Thetis
 
             InitializeComponent();								// Windows Forms Generated Code
             CaptureEnglishMenuText();
-            CaptureAllControlEnglishText();
-            InitUiLanguageSyncTimer();
             ApplyUiLanguage(UiLanguage.English);
             Common.DoubleBufferAll(this, true);
 
@@ -47304,19 +47271,6 @@ namespace Thetis
         //
         #endregion
 
-        private void InitUiLanguageSyncTimer()
-        {
-            _uiLanguageSyncTimer.Interval = 800;
-            _uiLanguageSyncTimer.Tick += (sender, e) => SyncUiLanguageAcrossOpenForms();
-            _uiLanguageSyncTimer.Start();
-        }
-
-        private void SyncUiLanguageAcrossOpenForms()
-        {
-            if (_selectedUiLanguage == UiLanguage.English) return;
-            ApplyUiLanguageToOpenForms();
-        }
-
         private void languageEnglishToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ApplyUiLanguage(UiLanguage.English);
@@ -47334,12 +47288,15 @@ namespace Thetis
             if (language == UiLanguage.Chinese)
             {
                 ApplyLocalizedMenuText(_menuZhCnText);
-                ApplyUiLanguageToOpenForms();
             }
             else
             {
                 RestoreEnglishMenuText();
-                RestoreAllControlEnglishText();
+
+                // keep language selector fully English in English mode
+                languageToolStripMenuItem.Text = "Language";
+                languageEnglishToolStripMenuItem.Text = "English";
+                languageChineseToolStripMenuItem.Text = "Chinese";
             }
 
             languageEnglishToolStripMenuItem.Checked = language == UiLanguage.English;
@@ -47354,108 +47311,6 @@ namespace Thetis
             {
                 if (item is ToolStripSeparator || string.IsNullOrWhiteSpace(item.Name)) continue;
                 _menuEnglishText[item.Name] = item.Text;
-            }
-        }
-
-        private void CaptureAllControlEnglishText()
-        {
-            _controlEnglishText.Clear();
-            _toolStripEnglishText.Clear();
-            CaptureControlTreeEnglishText(this);
-        }
-
-        private void CaptureControlTreeEnglishText(Control root)
-        {
-            if (root == null) return;
-
-            if (!_controlEnglishText.ContainsKey(root))
-                _controlEnglishText[root] = root.Text;
-
-            if (root.ContextMenuStrip != null)
-                CaptureToolStripEnglishText(root.ContextMenuStrip.Items);
-
-            if (root is MenuStrip menuStrip)
-                CaptureToolStripEnglishText(menuStrip.Items);
-
-            if (root is ToolStrip toolStrip)
-                CaptureToolStripEnglishText(toolStrip.Items);
-
-            foreach (Control child in root.Controls)
-                CaptureControlTreeEnglishText(child);
-        }
-
-        private void CaptureToolStripEnglishText(ToolStripItemCollection items)
-        {
-            foreach (ToolStripItem item in items)
-            {
-                if (!_toolStripEnglishText.ContainsKey(item))
-                    _toolStripEnglishText[item] = item.Text;
-
-                if (item is ToolStripDropDownItem dropDownItem)
-                    CaptureToolStripEnglishText(dropDownItem.DropDownItems);
-            }
-        }
-
-        private void ApplyUiLanguageToOpenForms()
-        {
-            foreach (Form form in Application.OpenForms)
-                ApplyUiLanguageToControlTree(form);
-        }
-
-        private void ApplyUiLanguageToControlTree(Control root)
-        {
-            if (root == null) return;
-
-            if (!_controlEnglishText.TryGetValue(root, out string englishText))
-            {
-                englishText = root.Text;
-                _controlEnglishText[root] = englishText;
-            }
-
-            root.Text = TranslateUiTextToChinese(englishText);
-
-            if (root.ContextMenuStrip != null)
-                ApplyUiLanguageToToolStripItems(root.ContextMenuStrip.Items);
-
-            if (root is MenuStrip menuStrip)
-                ApplyUiLanguageToToolStripItems(menuStrip.Items);
-
-            if (root is ToolStrip toolStrip)
-                ApplyUiLanguageToToolStripItems(toolStrip.Items);
-
-            foreach (Control child in root.Controls)
-                ApplyUiLanguageToControlTree(child);
-        }
-
-        private void ApplyUiLanguageToToolStripItems(ToolStripItemCollection items)
-        {
-            foreach (ToolStripItem item in items)
-            {
-                if (!_toolStripEnglishText.TryGetValue(item, out string englishText))
-                {
-                    englishText = item.Text;
-                    _toolStripEnglishText[item] = englishText;
-                }
-
-                item.Text = TranslateUiTextToChinese(englishText);
-
-                if (item is ToolStripDropDownItem dropDownItem)
-                    ApplyUiLanguageToToolStripItems(dropDownItem.DropDownItems);
-            }
-        }
-
-        private void RestoreAllControlEnglishText()
-        {
-            foreach (KeyValuePair<Control, string> pair in _controlEnglishText)
-            {
-                if (pair.Key == null || pair.Key.IsDisposed) continue;
-                pair.Key.Text = pair.Value;
-            }
-
-            foreach (KeyValuePair<ToolStripItem, string> pair in _toolStripEnglishText)
-            {
-                if (pair.Key == null) continue;
-                pair.Key.Text = pair.Value;
             }
         }
 
@@ -47493,56 +47348,13 @@ namespace Thetis
 
         private static string TranslateMenuTextToChinese(string englishText)
         {
-            return TranslateUiTextToChinese(englishText);
-        }
-
-        private static string TranslateUiTextToChinese(string englishText)
-        {
             if (string.IsNullOrWhiteSpace(englishText)) return englishText;
 
-            if (_uiZhCnByEnglishText.TryGetValue(englishText, out string exactMatch))
+            if (_menuZhCnByEnglishText.TryGetValue(englishText, out string exactMatch))
                 return exactMatch;
 
-            if (_menuZhCnByEnglishText.TryGetValue(englishText, out exactMatch))
-                return exactMatch;
-
-            string text = englishText;
-            text = text.Replace("Setup", "设置");
-            text = text.Replace("Settings", "设置");
-            text = text.Replace("Display", "显示");
-            text = text.Replace("Controls", "控制");
-            text = text.Replace("Control", "控制");
-            text = text.Replace("Database", "数据库");
-            text = text.Replace("Manager", "管理");
-            text = text.Replace("Memory", "记忆");
-            text = text.Replace("Wave", "波形");
-            text = text.Replace("Equalizer", "均衡器");
-            text = text.Replace("Filter", "滤波");
-            text = text.Replace("Band", "波段");
-            text = text.Replace("Mode", "模式");
-            text = text.Replace("Linearity", "线性");
-            text = text.Replace("Finder", "查找");
-            text = text.Replace("About", "关于");
-            text = text.Replace("Language", "语言");
-            text = text.Replace("Chinese", "中文");
-            text = text.Replace("ByPass", "旁路");
-            text = text.Replace("Bypass", "旁路");
-            text = text.Replace("Save", "保存");
-            text = text.Replace("Close", "关闭");
-            text = text.Replace("Cancel", "取消");
-            text = text.Replace("Apply", "应用");
-            text = text.Replace("Delete", "删除");
-            text = text.Replace("Edit", "编辑");
-            text = text.Replace("Add", "添加");
-            text = text.Replace("Remove", "移除");
-            text = text.Replace("Clear", "清除");
-            text = text.Replace("Refresh", "刷新");
-            text = text.Replace("Browse", "浏览");
-            text = text.Replace("Enable", "启用");
-            text = text.Replace("Disable", "禁用");
-            text = text.Replace("Help", "帮助");
-
-            return text;
+            // avoid mixed Chinese/English words in one menu item
+            return englishText;
         }
 
         private IEnumerable<ToolStripItem> EnumerateAllMenuItems()
