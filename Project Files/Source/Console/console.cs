@@ -90,6 +90,8 @@ namespace Thetis
 
         private UiLanguage _selectedUiLanguage = UiLanguage.English;
         private readonly Dictionary<string, string> _menuEnglishText = new Dictionary<string, string>();
+        private readonly Dictionary<Control, string> _controlEnglishText = new Dictionary<Control, string>();
+        private readonly Dictionary<ToolStripItem, string> _toolStripEnglishText = new Dictionary<ToolStripItem, string>();
 
         private static readonly Dictionary<string, string> _menuZhCnText = new Dictionary<string, string>
         {
@@ -47208,6 +47210,30 @@ namespace Thetis
 
             languageEnglishToolStripMenuItem.Checked = language == UiLanguage.English;
             languageChineseToolStripMenuItem.Checked = language == UiLanguage.Chinese;
+
+            ApplyUiLanguageToOpenForms();
+        }
+
+        private void ApplyUiLanguageToOpenForms()
+        {
+            foreach (Form form in Application.OpenForms.OfType<Form>())
+            {
+                ApplyUiLanguageToForm(form);
+            }
+        }
+
+        private void ApplyUiLanguageToForm(Form form)
+        {
+            if (form == null || form.IsDisposed) return;
+
+            if (_selectedUiLanguage == UiLanguage.Chinese)
+            {
+                ApplyChineseToControlTree(form);
+            }
+            else
+            {
+                RestoreEnglishControlTree(form);
+            }
         }
 
         private void CaptureEnglishMenuText()
@@ -47284,6 +47310,126 @@ namespace Thetis
             text = text.Replace("Bypass", "旁路");
 
             return text;
+        }
+
+        private void ApplyChineseToControlTree(Control root)
+        {
+            foreach (Control control in EnumerateControls(root))
+            {
+                CacheControlText(control);
+
+                if (CanTranslateControlText(control))
+                    control.Text = TranslateMenuTextToChinese(control.Text);
+
+                if (control is DataGridView dgv)
+                {
+                    foreach (DataGridViewColumn col in dgv.Columns)
+                    {
+                        if (string.IsNullOrWhiteSpace(col.HeaderText)) continue;
+                        if (!_controlEnglishText.ContainsKey(dgv)) CacheControlText(dgv);
+                        col.HeaderText = TranslateMenuTextToChinese(col.HeaderText);
+                    }
+                }
+
+                if (control.ContextMenuStrip != null)
+                {
+                    ApplyChineseToToolStripItems(control.ContextMenuStrip.Items);
+                }
+            }
+
+            foreach (ToolStrip toolStrip in EnumerateToolStrips(root))
+            {
+                ApplyChineseToToolStripItems(toolStrip.Items);
+            }
+        }
+
+        private void RestoreEnglishControlTree(Control root)
+        {
+            foreach (Control control in EnumerateControls(root))
+            {
+                if (_controlEnglishText.TryGetValue(control, out string text))
+                    control.Text = text;
+
+                if (control.ContextMenuStrip != null)
+                {
+                    RestoreEnglishToolStripItems(control.ContextMenuStrip.Items);
+                }
+            }
+
+            foreach (ToolStrip toolStrip in EnumerateToolStrips(root))
+            {
+                RestoreEnglishToolStripItems(toolStrip.Items);
+            }
+        }
+
+        private void ApplyChineseToToolStripItems(ToolStripItemCollection items)
+        {
+            foreach (ToolStripItem item in items)
+            {
+                CacheToolStripItemText(item);
+
+                if (!(item is ToolStripSeparator) && !string.IsNullOrWhiteSpace(item.Text))
+                    item.Text = TranslateMenuTextToChinese(item.Text);
+
+                if (item is ToolStripDropDownItem dropDown)
+                    ApplyChineseToToolStripItems(dropDown.DropDownItems);
+            }
+        }
+
+        private void RestoreEnglishToolStripItems(ToolStripItemCollection items)
+        {
+            foreach (ToolStripItem item in items)
+            {
+                if (_toolStripEnglishText.TryGetValue(item, out string text))
+                    item.Text = text;
+
+                if (item is ToolStripDropDownItem dropDown)
+                    RestoreEnglishToolStripItems(dropDown.DropDownItems);
+            }
+        }
+
+        private void CacheControlText(Control control)
+        {
+            if (control == null) return;
+            if (!_controlEnglishText.ContainsKey(control))
+                _controlEnglishText[control] = control.Text;
+        }
+
+        private void CacheToolStripItemText(ToolStripItem item)
+        {
+            if (item == null) return;
+            if (!_toolStripEnglishText.ContainsKey(item))
+                _toolStripEnglishText[item] = item.Text;
+        }
+
+        private static bool CanTranslateControlText(Control control)
+        {
+            if (control is TextBoxBase) return false;
+            if (control is ComboBox) return false;
+            if (control is NumericUpDown) return false;
+            return !string.IsNullOrWhiteSpace(control.Text);
+        }
+
+        private static IEnumerable<Control> EnumerateControls(Control root)
+        {
+            if (root == null) yield break;
+
+            yield return root;
+
+            foreach (Control child in root.Controls)
+            {
+                foreach (Control nested in EnumerateControls(child))
+                    yield return nested;
+            }
+        }
+
+        private static IEnumerable<ToolStrip> EnumerateToolStrips(Control root)
+        {
+            foreach (Control control in EnumerateControls(root))
+            {
+                if (control is ToolStrip toolStrip)
+                    yield return toolStrip;
+            }
         }
 
         private void CacheEnglishMenuItemText(ToolStripItem item)
