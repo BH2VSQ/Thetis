@@ -858,6 +858,9 @@
             this.BPFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BPF1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BPF2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.languageEnglishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.languageChineseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finderMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMain = new System.Windows.Forms.StatusStrip();
@@ -4117,6 +4120,7 @@
             this.wBToolStripMenuItem,
             this.pIToolStripMenuItem,
             this.BPFToolStripMenuItem,
+            this.languageToolStripMenuItem,
             this.finderMenuItem,
             this.miAbout});
             this.menuStrip1.Name = "menuStrip1";
@@ -4983,6 +4987,27 @@
             this.BPF2ToolStripMenuItem.Name = "BPF2ToolStripMenuItem";
             resources.ApplyResources(this.BPF2ToolStripMenuItem, "BPF2ToolStripMenuItem");
             this.BPF2ToolStripMenuItem.Click += new System.EventHandler(this.BPF2ToolStripMenuItem_Click);
+            // 
+            // languageToolStripMenuItem
+            // 
+            this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.languageEnglishToolStripMenuItem,
+            this.languageChineseToolStripMenuItem});
+            this.languageToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
+            // 
+            // languageEnglishToolStripMenuItem
+            // 
+            this.languageEnglishToolStripMenuItem.Name = "languageEnglishToolStripMenuItem";
+            resources.ApplyResources(this.languageEnglishToolStripMenuItem, "languageEnglishToolStripMenuItem");
+            this.languageEnglishToolStripMenuItem.Click += new System.EventHandler(this.languageEnglishToolStripMenuItem_Click);
+            // 
+            // languageChineseToolStripMenuItem
+            // 
+            this.languageChineseToolStripMenuItem.Name = "languageChineseToolStripMenuItem";
+            resources.ApplyResources(this.languageChineseToolStripMenuItem, "languageChineseToolStripMenuItem");
+            this.languageChineseToolStripMenuItem.Click += new System.EventHandler(this.languageChineseToolStripMenuItem_Click);
             // 
             // finderMenuItem
             // 
@@ -7897,6 +7922,9 @@
         private NumericUpDownTS nudPwrTemp;
         private NumericUpDownTS nudPwrTemp2;
         private ToolStripStatusLabel toolStripStatusLabel_TXInhibit;
+        private ToolStripMenuItem languageToolStripMenuItem;
+        private ToolStripMenuItem languageEnglishToolStripMenuItem;
+        private ToolStripMenuItem languageChineseToolStripMenuItem;
         private ToolStripMenuItem finderMenuItem;
         private ToolStripStatusLabel toolStripStatusLabel_CMstatus;
         private ToolStripStatusLabel toolStripStatusLabel_CatSerial;
