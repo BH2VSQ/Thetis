@@ -9795,6 +9795,24 @@ Ctrl + Left Click on any Band Button adds to Stack</value>
   <data name="BPFToolStripMenuItem.Text" xml:space="preserve">
     <value>BPF</value>
   </data>
+  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 20</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="languageEnglishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 22</value>
+  </data>
+  <data name="languageEnglishToolStripMenuItem.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="languageChineseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 22</value>
+  </data>
+  <data name="languageChineseToolStripMenuItem.Text" xml:space="preserve">
+    <value>中文</value>
+  </data>
   <data name="finderMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 20</value>
   </data>

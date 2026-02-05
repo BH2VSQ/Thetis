@@ -82,7 +82,41 @@ namespace Thetis
 
         public const int MAX_FPS = 640;
 
-        
+        private enum UiLanguage
+        {
+            English,
+            Chinese
+        }
+
+        private UiLanguage _selectedUiLanguage = UiLanguage.English;
+
+        private static readonly Dictionary<string, string> _menuZhCnText = new Dictionary<string, string>
+        {
+            { "setupToolStripMenuItem", "设置" },
+            { "memoryToolStripMenuItem", "记忆" },
+            { "waveToolStripMenuItem", "波形" },
+            { "equalizerToolStripMenuItem", "均衡器" },
+            { "xVTRsToolStripMenuItem", "转换器" },
+            { "cWXToolStripMenuItem", "CWX" },
+            { "eSCToolStripMenuItem", "ESC" },
+            { "collapseToolStripMenuItem", "收起" },
+            { "displayControlsToolStripMenuItem", "显示控制" },
+            { "dSPToolStripMenuItem", "数字信号处理" },
+            { "bandToolStripMenuItem", "波段" },
+            { "modeToolStripMenuItem", "模式" },
+            { "filterToolStripMenuItem", "滤波器" },
+            { "rX2ToolStripMenuItem", "RX2" },
+            { "linearityToolStripMenuItem", "线性" },
+            { "RAtoolStripMenuItem", "无线电天文" },
+            { "wBToolStripMenuItem", "宽带" },
+            { "pIToolStripMenuItem", "PI" },
+            { "BPFToolStripMenuItem", "带通滤波" },
+            { "finderMenuItem", "查找" },
+            { "miAbout", "关于" },
+            { "languageToolStripMenuItem", "语言" },
+            { "languageEnglishToolStripMenuItem", "English" },
+            { "languageChineseToolStripMenuItem", "中文" }
+        };
 
         #region Variable Declarations
         // ======================================================
@@ -721,6 +755,7 @@ namespace Thetis
             LogTool.AddLogEntry("Initialising components...", "COMP");
 
             InitializeComponent();								// Windows Forms Generated Code
+            ApplyUiLanguage(UiLanguage.English);
             Common.DoubleBufferAll(this, true);
 
             InitialiseAndromedaMenus();
@@ -47115,6 +47150,104 @@ namespace Thetis
         }
         //
         #endregion
+
+        private void languageEnglishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ApplyUiLanguage(UiLanguage.English);
+        }
+
+        private void languageChineseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ApplyUiLanguage(UiLanguage.Chinese);
+        }
+
+        private void ApplyUiLanguage(UiLanguage language)
+        {
+            _selectedUiLanguage = language;
+
+            if (language == UiLanguage.Chinese)
+            {
+                ApplyLocalizedMenuText(_menuZhCnText);
+            }
+            else
+            {
+                ApplyEnglishMenuText();
+            }
+
+            languageEnglishToolStripMenuItem.Checked = language == UiLanguage.English;
+            languageChineseToolStripMenuItem.Checked = language == UiLanguage.Chinese;
+        }
+
+        private void ApplyEnglishMenuText()
+        {
+            var resources = new System.ComponentModel.ComponentResourceManager(typeof(Console));
+            ApplyResourceText(resources, setupToolStripMenuItem, "setupToolStripMenuItem");
+            ApplyResourceText(resources, memoryToolStripMenuItem, "memoryToolStripMenuItem");
+            ApplyResourceText(resources, waveToolStripMenuItem, "waveToolStripMenuItem");
+            ApplyResourceText(resources, equalizerToolStripMenuItem, "equalizerToolStripMenuItem");
+            ApplyResourceText(resources, xVTRsToolStripMenuItem, "xVTRsToolStripMenuItem");
+            ApplyResourceText(resources, cWXToolStripMenuItem, "cWXToolStripMenuItem");
+            ApplyResourceText(resources, eSCToolStripMenuItem, "eSCToolStripMenuItem");
+            ApplyResourceText(resources, collapseToolStripMenuItem, "collapseToolStripMenuItem");
+            ApplyResourceText(resources, displayControlsToolStripMenuItem, "displayControlsToolStripMenuItem");
+            ApplyResourceText(resources, dSPToolStripMenuItem, "dSPToolStripMenuItem");
+            ApplyResourceText(resources, bandToolStripMenuItem, "bandToolStripMenuItem");
+            ApplyResourceText(resources, modeToolStripMenuItem, "modeToolStripMenuItem");
+            ApplyResourceText(resources, filterToolStripMenuItem, "filterToolStripMenuItem");
+            ApplyResourceText(resources, rX2ToolStripMenuItem, "rX2ToolStripMenuItem");
+            ApplyResourceText(resources, linearityToolStripMenuItem, "linearityToolStripMenuItem");
+            ApplyResourceText(resources, RAtoolStripMenuItem, "RAtoolStripMenuItem");
+            ApplyResourceText(resources, wBToolStripMenuItem, "wBToolStripMenuItem");
+            ApplyResourceText(resources, pIToolStripMenuItem, "pIToolStripMenuItem");
+            ApplyResourceText(resources, BPFToolStripMenuItem, "BPFToolStripMenuItem");
+            ApplyResourceText(resources, finderMenuItem, "finderMenuItem");
+            ApplyResourceText(resources, miAbout, "miAbout");
+            ApplyResourceText(resources, languageToolStripMenuItem, "languageToolStripMenuItem");
+            ApplyResourceText(resources, languageEnglishToolStripMenuItem, "languageEnglishToolStripMenuItem");
+            ApplyResourceText(resources, languageChineseToolStripMenuItem, "languageChineseToolStripMenuItem");
+        }
+
+        private static void ApplyResourceText(System.ComponentModel.ComponentResourceManager resources, ToolStripMenuItem item, string resourceKey)
+        {
+            string text = resources.GetString(resourceKey + ".Text");
+            if (!string.IsNullOrEmpty(text)) item.Text = text;
+        }
+
+        private void ApplyLocalizedMenuText(Dictionary<string, string> menuText)
+        {
+            ApplyLocalizedMenuItemText(setupToolStripMenuItem, "setupToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(memoryToolStripMenuItem, "memoryToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(waveToolStripMenuItem, "waveToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(equalizerToolStripMenuItem, "equalizerToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(xVTRsToolStripMenuItem, "xVTRsToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(cWXToolStripMenuItem, "cWXToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(eSCToolStripMenuItem, "eSCToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(collapseToolStripMenuItem, "collapseToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(displayControlsToolStripMenuItem, "displayControlsToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(dSPToolStripMenuItem, "dSPToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(bandToolStripMenuItem, "bandToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(modeToolStripMenuItem, "modeToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(filterToolStripMenuItem, "filterToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(rX2ToolStripMenuItem, "rX2ToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(linearityToolStripMenuItem, "linearityToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(RAtoolStripMenuItem, "RAtoolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(wBToolStripMenuItem, "wBToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(pIToolStripMenuItem, "pIToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(BPFToolStripMenuItem, "BPFToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(finderMenuItem, "finderMenuItem", menuText);
+            ApplyLocalizedMenuItemText(miAbout, "miAbout", menuText);
+            ApplyLocalizedMenuItemText(languageToolStripMenuItem, "languageToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(languageEnglishToolStripMenuItem, "languageEnglishToolStripMenuItem", menuText);
+            ApplyLocalizedMenuItemText(languageChineseToolStripMenuItem, "languageChineseToolStripMenuItem", menuText);
+        }
+
+        private static void ApplyLocalizedMenuItemText(ToolStripMenuItem item, string key, Dictionary<string, string> menuText)
+        {
+            if (menuText.TryGetValue(key, out string text))
+            {
+                item.Text = text;
+            }
+        }
 
         private void databaseManagerToolStripMenuItem_Click(object sender, EventArgs e)
         {
