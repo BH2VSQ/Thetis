@@ -52,7 +52,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Name";
+            this.label1.Text = "名称";
             // 
             // loadButton
             // 
@@ -62,7 +62,7 @@
             this.loadButton.Name = "loadButton";
             this.loadButton.Size = new System.Drawing.Size(75, 23);
             this.loadButton.TabIndex = 2;
-            this.loadButton.Text = "Load";
+            this.loadButton.Text = "加载";
             this.loadButton.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -72,7 +72,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Cancel";
+            this.button2.Text = "取消";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -82,7 +82,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Mappings";
+            this.label2.Text = "映射";
             // 
             // mappingsLB
             // 
@@ -111,7 +111,7 @@
             this.Name = "LoadDialog";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Load Mapping";
+            this.Text = "加载映射";
             this.ResumeLayout(false);
             this.PerformLayout();
 

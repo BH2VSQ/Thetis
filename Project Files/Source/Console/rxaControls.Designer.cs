@@ -790,7 +790,7 @@
             this.chkClickTuneFilter.Name = "chkClickTuneFilter";
             this.chkClickTuneFilter.Size = new System.Drawing.Size(112, 16);
             this.chkClickTuneFilter.TabIndex = 6;
-            this.chkClickTuneFilter.Text = "Show CT Filter";
+            this.chkClickTuneFilter.Text = "Show CT 滤波";
             // 
             // chkMouseTuneStep
             // 
@@ -828,7 +828,7 @@
             this.chkOptAlwaysOnTop.Name = "chkOptAlwaysOnTop";
             this.chkOptAlwaysOnTop.Size = new System.Drawing.Size(104, 16);
             this.chkOptAlwaysOnTop.TabIndex = 0;
-            this.chkOptAlwaysOnTop.Text = "Always On Top";
+            this.chkOptAlwaysOnTop.Text = "总在最前";
             // 
             // tpFilters
             // 
@@ -856,7 +856,7 @@
             this.grpOptFilterControls.Size = new System.Drawing.Size(200, 152);
             this.grpOptFilterControls.TabIndex = 29;
             this.grpOptFilterControls.TabStop = false;
-            this.grpOptFilterControls.Text = "RX1 Filter Controls";
+            this.grpOptFilterControls.Text = "RX1 滤波 控制";
             // 
             // udFilterDefaultLowCut
             // 
@@ -892,7 +892,7 @@
             this.lblDefaultLowCut.Name = "lblDefaultLowCut";
             this.lblDefaultLowCut.Size = new System.Drawing.Size(120, 23);
             this.lblDefaultLowCut.TabIndex = 16;
-            this.lblDefaultLowCut.Text = "Default Low Cut (Hz):";
+            this.lblDefaultLowCut.Text = "默认 Low Cut (Hz):";
             // 
             // udOptMaxFilterShift
             // 
@@ -928,7 +928,7 @@
             this.lblOptMaxFilterShift.Name = "lblOptMaxFilterShift";
             this.lblOptMaxFilterShift.Size = new System.Drawing.Size(120, 23);
             this.lblOptMaxFilterShift.TabIndex = 14;
-            this.lblOptMaxFilterShift.Text = "Max Filter Shift (Hz):";
+            this.lblOptMaxFilterShift.Text = "Max 滤波 Shift (Hz):";
             // 
             // comboOptFilterWidthMode
             // 
@@ -950,7 +950,7 @@
             this.lblOptWidthSliderMode.Name = "lblOptWidthSliderMode";
             this.lblOptWidthSliderMode.Size = new System.Drawing.Size(104, 16);
             this.lblOptWidthSliderMode.TabIndex = 11;
-            this.lblOptWidthSliderMode.Text = "Width Slider Mode:";
+            this.lblOptWidthSliderMode.Text = "Width Slider 模式:";
             // 
             // udOptMaxFilterWidth
             // 
@@ -986,7 +986,7 @@
             this.lblOptMaxFilter.Name = "lblOptMaxFilter";
             this.lblOptMaxFilter.Size = new System.Drawing.Size(120, 23);
             this.lblOptMaxFilter.TabIndex = 10;
-            this.lblOptMaxFilter.Text = "Max Filter Width (Hz):";
+            this.lblOptMaxFilter.Text = "Max 滤波 Width (Hz):";
             // 
             // chkOptFilterSaveChanges
             // 
@@ -997,7 +997,7 @@
             this.chkOptFilterSaveChanges.Name = "chkOptFilterSaveChanges";
             this.chkOptFilterSaveChanges.Size = new System.Drawing.Size(176, 16);
             this.chkOptFilterSaveChanges.TabIndex = 15;
-            this.chkOptFilterSaveChanges.Text = "Save Slider/Display Changes";
+            this.chkOptFilterSaveChanges.Text = "保存 Slider/显示 Changes";
             // 
             // tpADC
             // 
@@ -1402,7 +1402,7 @@
             this.tpDisplay.Name = "tpDisplay";
             this.tpDisplay.Size = new System.Drawing.Size(584, 364);
             this.tpDisplay.TabIndex = 2;
-            this.tpDisplay.Text = "Display";
+            this.tpDisplay.Text = "显示";
             // 
             // tcDisplay
             // 
@@ -1525,7 +1525,7 @@
             this.lblMultimeterDigitalDelay.Name = "lblMultimeterDigitalDelay";
             this.lblMultimeterDigitalDelay.Size = new System.Drawing.Size(120, 16);
             this.lblMultimeterDigitalDelay.TabIndex = 35;
-            this.lblMultimeterDigitalDelay.Text = "Digital Refresh (ms):";
+            this.lblMultimeterDigitalDelay.Text = "Digital 刷新 (ms):";
             // 
             // udDisplayMeterAvg
             // 
@@ -1561,7 +1561,7 @@
             this.lblDisplayMeterAvg.Name = "lblDisplayMeterAvg";
             this.lblDisplayMeterAvg.Size = new System.Drawing.Size(112, 16);
             this.lblDisplayMeterAvg.TabIndex = 7;
-            this.lblDisplayMeterAvg.Text = "Average Time (ms):";
+            this.lblDisplayMeterAvg.Text = "平均 Time (ms):";
             // 
             // udDisplayMultiTextHoldTime
             // 
@@ -1669,7 +1669,7 @@
             this.lblDisplayMeterDelay.Name = "lblDisplayMeterDelay";
             this.lblDisplayMeterDelay.Size = new System.Drawing.Size(128, 16);
             this.lblDisplayMeterDelay.TabIndex = 33;
-            this.lblDisplayMeterDelay.Text = "Analog Refresh (ms):";
+            this.lblDisplayMeterDelay.Text = "Analog 刷新 (ms):";
             // 
             // grpDisplayRefreshRates
             // 
@@ -1683,7 +1683,7 @@
             this.grpDisplayRefreshRates.Size = new System.Drawing.Size(176, 108);
             this.grpDisplayRefreshRates.TabIndex = 39;
             this.grpDisplayRefreshRates.TabStop = false;
-            this.grpDisplayRefreshRates.Text = "Refresh Rates";
+            this.grpDisplayRefreshRates.Text = "刷新 Rates";
             // 
             // chkDisplayPanFill
             // 
@@ -1766,7 +1766,7 @@
             this.lblDisplayFPS.Name = "lblDisplayFPS";
             this.lblDisplayFPS.Size = new System.Drawing.Size(104, 16);
             this.lblDisplayFPS.TabIndex = 31;
-            this.lblDisplayFPS.Text = "Main Display FPS:";
+            this.lblDisplayFPS.Text = "Main 显示 FPS:";
             // 
             // tpDisplayTop
             // 
@@ -1812,7 +1812,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(129, 13);
             this.label15.TabIndex = 82;
-            this.label15.Text = "Band for Max/Min Levels:";
+            this.label15.Text = "波段 for Max/Min Levels:";
             // 
             // txtDisplayGridBandLevel
             // 
@@ -1821,7 +1821,7 @@
             this.txtDisplayGridBandLevel.ReadOnly = true;
             this.txtDisplayGridBandLevel.Size = new System.Drawing.Size(94, 20);
             this.txtDisplayGridBandLevel.TabIndex = 81;
-            this.txtDisplayGridBandLevel.Text = "Current Band";
+            this.txtDisplayGridBandLevel.Text = "Current 波段";
             // 
             // comboDisplayLabelAlign
             // 
@@ -2237,7 +2237,7 @@
             this.lblWaterfallLevels.Name = "lblWaterfallLevels";
             this.lblWaterfallLevels.Size = new System.Drawing.Size(134, 13);
             this.lblWaterfallLevels.TabIndex = 80;
-            this.lblWaterfallLevels.Text = "Band for Low/High Levels:";
+            this.lblWaterfallLevels.Text = "波段 for Low/High Levels:";
             // 
             // txtWaterFallBandLevel
             // 
@@ -2246,7 +2246,7 @@
             this.txtWaterFallBandLevel.ReadOnly = true;
             this.txtWaterFallBandLevel.Size = new System.Drawing.Size(94, 20);
             this.txtWaterFallBandLevel.TabIndex = 79;
-            this.txtWaterFallBandLevel.Text = "Current Band";
+            this.txtWaterFallBandLevel.Text = "Current 波段";
             // 
             // comboColorPalette
             // 
@@ -2307,7 +2307,7 @@
             this.lblDisplayWaterfallUpdatePeriod.Name = "lblDisplayWaterfallUpdatePeriod";
             this.lblDisplayWaterfallUpdatePeriod.Size = new System.Drawing.Size(72, 32);
             this.lblDisplayWaterfallUpdatePeriod.TabIndex = 72;
-            this.lblDisplayWaterfallUpdatePeriod.Text = "Update Period (ms):";
+            this.lblDisplayWaterfallUpdatePeriod.Text = "更新 Period (ms):";
             // 
             // udDisplayWaterfallAvgTime
             // 
@@ -2520,7 +2520,7 @@
             this.lblRX2WaterfallLevels.Name = "lblRX2WaterfallLevels";
             this.lblRX2WaterfallLevels.Size = new System.Drawing.Size(134, 13);
             this.lblRX2WaterfallLevels.TabIndex = 80;
-            this.lblRX2WaterfallLevels.Text = "Band for Low/High Levels:";
+            this.lblRX2WaterfallLevels.Text = "波段 for Low/High Levels:";
             // 
             // txtRX2WaterFallBandLevel
             // 
@@ -2529,7 +2529,7 @@
             this.txtRX2WaterFallBandLevel.ReadOnly = true;
             this.txtRX2WaterFallBandLevel.Size = new System.Drawing.Size(94, 20);
             this.txtRX2WaterFallBandLevel.TabIndex = 79;
-            this.txtRX2WaterFallBandLevel.Text = "Current Band";
+            this.txtRX2WaterFallBandLevel.Text = "Current 波段";
             // 
             // comboRX2ColorPalette
             // 
@@ -2590,7 +2590,7 @@
             this.lblRX2DisplayWaterfallUpdatePeriod.Name = "lblRX2DisplayWaterfallUpdatePeriod";
             this.lblRX2DisplayWaterfallUpdatePeriod.Size = new System.Drawing.Size(72, 32);
             this.lblRX2DisplayWaterfallUpdatePeriod.TabIndex = 72;
-            this.lblRX2DisplayWaterfallUpdatePeriod.Text = "Update Period (ms):";
+            this.lblRX2DisplayWaterfallUpdatePeriod.Text = "更新 Period (ms):";
             // 
             // udRX2DisplayWaterfallAvgTime
             // 
@@ -2748,7 +2748,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(129, 13);
             this.label16.TabIndex = 84;
-            this.label16.Text = "Band for Max/Min Levels:";
+            this.label16.Text = "波段 for Max/Min Levels:";
             // 
             // txtRX2DisplayGridBandLevel
             // 
@@ -2757,7 +2757,7 @@
             this.txtRX2DisplayGridBandLevel.ReadOnly = true;
             this.txtRX2DisplayGridBandLevel.Size = new System.Drawing.Size(94, 20);
             this.txtRX2DisplayGridBandLevel.TabIndex = 83;
-            this.txtRX2DisplayGridBandLevel.Text = "Current Band";
+            this.txtRX2DisplayGridBandLevel.Text = "Current 波段";
             // 
             // comboBoxTS1
             // 
@@ -2922,7 +2922,7 @@
             this.chkRX2SpectrumPolyphase.Name = "chkRX2SpectrumPolyphase";
             this.chkRX2SpectrumPolyphase.Size = new System.Drawing.Size(64, 16);
             this.chkRX2SpectrumPolyphase.TabIndex = 39;
-            this.chkRX2SpectrumPolyphase.Text = "Enable";
+            this.chkRX2SpectrumPolyphase.Text = "启用";
             // 
             // clrbtnRX2WaterfallHigh
             // 
@@ -3207,7 +3207,7 @@
             this.chkTXGridControl.Name = "chkTXGridControl";
             this.chkTXGridControl.Size = new System.Drawing.Size(98, 16);
             this.chkTXGridControl.TabIndex = 83;
-            this.chkTXGridControl.Text = "Display Grid";
+            this.chkTXGridControl.Text = "显示 Grid";
             // 
             // chkTXPanFill
             // 
@@ -3820,7 +3820,7 @@
             this.grpDSPWintype.Size = new System.Drawing.Size(109, 85);
             this.grpDSPWintype.TabIndex = 34;
             this.grpDSPWintype.TabStop = false;
-            this.grpDSPWintype.Text = "Filter Windows";
+            this.grpDSPWintype.Text = "滤波 Windows";
             // 
             // labelTS144
             // 
@@ -3887,7 +3887,7 @@
             this.chkCWDisableUI.Name = "chkCWDisableUI";
             this.chkCWDisableUI.Size = new System.Drawing.Size(109, 32);
             this.chkCWDisableUI.TabIndex = 42;
-            this.chkCWDisableUI.Text = "Disable UI MOX Changes";
+            this.chkCWDisableUI.Text = "禁用 UI MOX Changes";
             // 
             // grpKeyerConnections
             // 
@@ -4125,7 +4125,7 @@
             this.chkCWKeyerMode.Name = "chkCWKeyerMode";
             this.chkCWKeyerMode.Size = new System.Drawing.Size(96, 16);
             this.chkCWKeyerMode.TabIndex = 40;
-            this.chkCWKeyerMode.Text = "Mode B";
+            this.chkCWKeyerMode.Text = "模式 B";
             // 
             // chkCWKeyerRevPdl
             // 
@@ -4166,7 +4166,7 @@
             this.chkCWAutoSwitchMode.Name = "chkCWAutoSwitchMode";
             this.chkCWAutoSwitchMode.Size = new System.Drawing.Size(109, 16);
             this.chkCWAutoSwitchMode.TabIndex = 41;
-            this.chkCWAutoSwitchMode.Text = "Auto Mode Swch";
+            this.chkCWAutoSwitchMode.Text = "Auto 模式 Swch";
             // 
             // grpDSPKeyerSemiBreakIn
             // 
@@ -4190,7 +4190,7 @@
             this.chkCWBreakInEnabled.Name = "chkCWBreakInEnabled";
             this.chkCWBreakInEnabled.Size = new System.Drawing.Size(80, 16);
             this.chkCWBreakInEnabled.TabIndex = 36;
-            this.chkCWBreakInEnabled.Text = "Enabled";
+            this.chkCWBreakInEnabled.Text = "启用";
             // 
             // lblCWBreakInDelay
             // 
@@ -4270,7 +4270,7 @@
             this.chkDSPLevelerEnabled.Name = "chkDSPLevelerEnabled";
             this.chkDSPLevelerEnabled.Size = new System.Drawing.Size(104, 16);
             this.chkDSPLevelerEnabled.TabIndex = 42;
-            this.chkDSPLevelerEnabled.Text = "Enabled";
+            this.chkDSPLevelerEnabled.Text = "启用";
             // 
             // lblDSPLevelerHangThreshold
             // 
@@ -4776,7 +4776,7 @@
             this.chkAGCDisplayHangLine.Name = "chkAGCDisplayHangLine";
             this.chkAGCDisplayHangLine.Size = new System.Drawing.Size(144, 18);
             this.chkAGCDisplayHangLine.TabIndex = 124;
-            this.chkAGCDisplayHangLine.Text = "Display RX1 Hang Line";
+            this.chkAGCDisplayHangLine.Text = "显示 RX1 Hang Line";
             // 
             // chkSpectrumLine
             // 
@@ -4798,7 +4798,7 @@
             this.chkShowAGC.Name = "chkShowAGC";
             this.chkShowAGC.Size = new System.Drawing.Size(144, 16);
             this.chkShowAGC.TabIndex = 122;
-            this.chkShowAGC.Text = "Display RX1 Gain Line";
+            this.chkShowAGC.Text = "显示 RX1 Gain Line";
             // 
             // label13
             // 
@@ -5350,7 +5350,7 @@
             this.grpAMSBSEL.Size = new System.Drawing.Size(228, 40);
             this.grpAMSBSEL.TabIndex = 0;
             this.grpAMSBSEL.TabStop = false;
-            this.grpAMSBSEL.Text = "Sideband Select (SAM ONLY)";
+            this.grpAMSBSEL.Text = "Sideband 选择 (SAM ONLY)";
             // 
             // radUSB
             // 
@@ -5418,7 +5418,7 @@
             this.chkRemoveTone.Name = "chkRemoveTone";
             this.chkRemoveTone.Size = new System.Drawing.Size(132, 17);
             this.chkRemoveTone.TabIndex = 0;
-            this.chkRemoveTone.Text = "Remove CTCSS Tone";
+            this.chkRemoveTone.Text = "移除 CTCSS Tone";
             this.chkRemoveTone.UseVisualStyleBackColor = true;
             // 
             // tpDSPAudio
@@ -5446,7 +5446,7 @@
             this.grpDSPAudRX1Dolly.Size = new System.Drawing.Size(321, 45);
             this.grpDSPAudRX1Dolly.TabIndex = 3;
             this.grpDSPAudRX1Dolly.TabStop = false;
-            this.grpDSPAudRX1Dolly.Text = "RX1 - Dolly Filter";
+            this.grpDSPAudRX1Dolly.Text = "RX1 - Dolly 滤波";
             // 
             // labelDSPRX1DollyF1
             // 
@@ -5530,7 +5530,7 @@
             this.chkDSPRX1DollyEnable.Name = "chkDSPRX1DollyEnable";
             this.chkDSPRX1DollyEnable.Size = new System.Drawing.Size(59, 17);
             this.chkDSPRX1DollyEnable.TabIndex = 1;
-            this.chkDSPRX1DollyEnable.Text = "Enable";
+            this.chkDSPRX1DollyEnable.Text = "启用";
             this.chkDSPRX1DollyEnable.UseVisualStyleBackColor = true;
             // 
             // grpDSPAudAPFControls
@@ -5543,7 +5543,7 @@
             this.grpDSPAudAPFControls.Size = new System.Drawing.Size(187, 42);
             this.grpDSPAudAPFControls.TabIndex = 47;
             this.grpDSPAudAPFControls.TabStop = false;
-            this.grpDSPAudAPFControls.Text = "Console APF Controls";
+            this.grpDSPAudAPFControls.Text = "Console APF 控制";
             // 
             // radDSPRX1APFControls
             // 
@@ -5733,7 +5733,7 @@
             this.chkDSPRX1APFEnable.Name = "chkDSPRX1APFEnable";
             this.chkDSPRX1APFEnable.Size = new System.Drawing.Size(59, 17);
             this.chkDSPRX1APFEnable.TabIndex = 0;
-            this.chkDSPRX1APFEnable.Text = "Enable";
+            this.chkDSPRX1APFEnable.Text = "启用";
             this.chkDSPRX1APFEnable.UseVisualStyleBackColor = true;
             // 
             // tpDSPNR
@@ -5807,7 +5807,7 @@
             this.chkDSPNR2AE.Name = "chkDSPNR2AE";
             this.chkDSPNR2AE.Size = new System.Drawing.Size(65, 17);
             this.chkDSPNR2AE.TabIndex = 1;
-            this.chkDSPNR2AE.Text = "AE Filter";
+            this.chkDSPNR2AE.Text = "AE 滤波";
             this.chkDSPNR2AE.UseVisualStyleBackColor = true;
             // 
             // grpDSPGainMethod
@@ -6311,7 +6311,7 @@
             this.grpAppearanceBand.Size = new System.Drawing.Size(144, 152);
             this.grpAppearanceBand.TabIndex = 74;
             this.grpAppearanceBand.TabStop = false;
-            this.grpAppearanceBand.Text = "Band Data";
+            this.grpAppearanceBand.Text = "波段 Data";
             // 
             // clrbtnBandBackground
             // 
@@ -6391,7 +6391,7 @@
             this.lblOutOfBand.Name = "lblOutOfBand";
             this.lblOutOfBand.Size = new System.Drawing.Size(72, 24);
             this.lblOutOfBand.TabIndex = 72;
-            this.lblOutOfBand.Text = "Out Of Band:";
+            this.lblOutOfBand.Text = "Out Of 波段:";
             // 
             // grpAppearanceVFO
             // 
@@ -6559,7 +6559,7 @@
             this.tpAppearanceDisplay.Name = "tpAppearanceDisplay";
             this.tpAppearanceDisplay.Size = new System.Drawing.Size(592, 318);
             this.tpAppearanceDisplay.TabIndex = 1;
-            this.tpAppearanceDisplay.Text = "RX Display";
+            this.tpAppearanceDisplay.Text = "RX 显示";
             // 
             // lblMultiRXFilterAlpha
             // 
@@ -6862,7 +6862,7 @@
             this.chkGridControl.Name = "chkGridControl";
             this.chkGridControl.Size = new System.Drawing.Size(120, 16);
             this.chkGridControl.TabIndex = 83;
-            this.chkGridControl.Text = "Display Grid";
+            this.chkGridControl.Text = "显示 Grid";
             // 
             // tbMultiRXFilterAlpha
             // 
@@ -6933,7 +6933,7 @@
             this.lblSubRXFilterColor.Name = "lblSubRXFilterColor";
             this.lblSubRXFilterColor.Size = new System.Drawing.Size(64, 32);
             this.lblSubRXFilterColor.TabIndex = 78;
-            this.lblSubRXFilterColor.Text = "MultiRX Filter Color:";
+            this.lblSubRXFilterColor.Text = "MultiRX 滤波 Color:";
             // 
             // clrbtnBandEdge
             // 
@@ -6953,7 +6953,7 @@
             this.lblBandEdge.Name = "lblBandEdge";
             this.lblBandEdge.Size = new System.Drawing.Size(64, 24);
             this.lblBandEdge.TabIndex = 65;
-            this.lblBandEdge.Text = "Band Edge:";
+            this.lblBandEdge.Text = "波段 Edge:";
             this.lblBandEdge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // clrbtnTXFilter
@@ -6974,7 +6974,7 @@
             this.lblTXFilterColor.Name = "lblTXFilterColor";
             this.lblTXFilterColor.Size = new System.Drawing.Size(64, 30);
             this.lblTXFilterColor.TabIndex = 75;
-            this.lblTXFilterColor.Text = "TX Filter Color:";
+            this.lblTXFilterColor.Text = "TX 滤波 Color:";
             // 
             // lblDisplayFilterColor
             // 
@@ -6983,7 +6983,7 @@
             this.lblDisplayFilterColor.Name = "lblDisplayFilterColor";
             this.lblDisplayFilterColor.Size = new System.Drawing.Size(64, 30);
             this.lblDisplayFilterColor.TabIndex = 45;
-            this.lblDisplayFilterColor.Text = "Main RX Filter Color:";
+            this.lblDisplayFilterColor.Text = "Main RX 滤波 Color:";
             // 
             // clrbtnFilter
             // 
@@ -7372,7 +7372,7 @@
             this.HideOnClose = true;
             this.Name = "rxaControls";
             this.ShowIcon = false;
-            this.Text = "Settings";
+            this.Text = "设置";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tcSetup.ResumeLayout(false);
             this.tpGeneral.ResumeLayout(false);

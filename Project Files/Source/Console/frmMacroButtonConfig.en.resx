@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" />
+              </xs:sequence>
+              <xs:attribute name="name" use="required" type="xsd:string" />
+              <xs:attribute name="type" type="xsd:string" />
+              <xs:attribute name="mimetype" type="xsd:string" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string" />
+              <xs:attribute name="name" type="xsd:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+                <xs:element name="comment" type="xsd:string" minOccurs="0" ns1:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" ns1:Ordinal="1" />
+              <xs:attribute name="type" type="xsd:string" ns1:Ordinal="3" />
+              <xs:attribute name="mimetype" type="xsd:string" ns1:Ordinal="4" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="pictureBox1.ToolTip" xml:space="preserve">
+    <value>[IF_ON]                        #if this button is on
+[IF_OFF]                       # if this button is off
+[ELSE]
+[ENDIF]
+[WAIT200]                      #wait 200ms
+[VAR_%variable%]PS;   #write result of cat cmd to variable. Must use %
+[IF_%variable%]             #use MMIO variable (must be a bool !). Must use %
+[IF_$4char$]                   #use 4char LED indicator variable. Must use $
+[ELSEIF_xyz]                   #else if can be used on %vars and $4char
+[STATE]PS;                     #writes output of cat cmd into cat ON= state</value>
+  </data>
+  <data name="txtCatMacro.Text" xml:space="preserve">
+    <value>#PS1;           # power on - disabled for debug
+FA00003710000;   # 3.710 mhz
+MD1;                # LSB
+ZZFI05;               # filter 5 (2.7khz)
+ZZAG050;              # 50% master af
+ZZZQ1;      # rx1 auto agc compensation
+ZZLA050;                # %50 rx1 af
+ZZPC010;                # 10% drive
+ZZTO010;               # 10% tune</value>
+  </data>
+<data name="groupBoxTS3.Text" xml:space="preserve"><value>CAT Macro</value></data><data name="btnCatTest.Text" xml:space="preserve"><value>Cat Tester</value></data><data name="chkCatSend_1.Text" xml:space="preserve"><value>Run Cat Macro</value></data><data name="lblErrorText.Text" xml:space="preserve"><value>Error</value></data><data name="btnCancel.Text" xml:space="preserve"><value>&amp;取消</value></data><data name="btnOK.Text" xml:space="preserve"><value>&amp;确定</value></data><data name="groupBoxTS2.Text" xml:space="preserve"><value>MMIO Actions</value></data><data name="labelTS8.Text" xml:space="preserve"><value>OFF raw text message</value></data><data name="txtMMIO_message_off_4.Text" xml:space="preserve"><value>WWWWWWWWWWWWWWWWWWWW</value></data><data name="txtMMIO_message_off_3.Text" xml:space="preserve"><value>%x4Kn.power%</value></data><data name="txtMMIO_message_off_2.Text" xml:space="preserve"><value>%vfoa_freq%</value></data><data name="txtMMIO_message_off_1.Text" xml:space="preserve"><value>Buton [ID] pressed. [STATE] [OLDSTATE]</value></data><data name="txtMMIO_message_4.Text" xml:space="preserve"><value>WWWWWWWWWWWWWWWWWWWW</value></data><data name="txtMMIO_4char_4.Text" xml:space="preserve"><value>WWWW</value></data><data name="chkSendMssageViaMMIO_4.Text" xml:space="preserve"><value>Send message via</value></data><data name="txtMMIO_message_3.Text" xml:space="preserve"><value>%x4Kn.power%</value></data><data name="txtMMIO_4char_3.Text" xml:space="preserve"><value>WWWW</value></data><data name="chkSendMssageViaMMIO_3.Text" xml:space="preserve"><value>Send message via</value></data><data name="txtMMIO_message_2.Text" xml:space="preserve"><value>%vfoa_freq%</value></data><data name="txtMMIO_4char_2.Text" xml:space="preserve"><value>WWWW</value></data><data name="chkSendMssageViaMMIO_2.Text" xml:space="preserve"><value>Send message via</value></data><data name="labelTS5.Text" xml:space="preserve"><value>4char</value></data><data name="labelTS4.Text" xml:space="preserve"><value>ON raw text message</value></data><data name="txtMMIO_message_1.Text" xml:space="preserve"><value>Buton [ID] pressed. [STATE] [OLDSTATE]</value></data><data name="txtMMIO_4char_1.Text" xml:space="preserve"><value>WWWW</value></data><data name="chkSendMssageViaMMIO_1.Text" xml:space="preserve"><value>Send message via</value></data><data name="labelTS3.Text" xml:space="preserve"><value>Notes:</value></data><data name="groupBoxTS1.Text" xml:space="preserve"><value>Button State</value></data><data name="chkRunStateCommandOnVisible.Text" xml:space="preserve"><value>Run state cmd when parent container becomes visible</value></data><data name="labelTS7.Text" xml:space="preserve"><value>ON=</value></data><data name="txtButtonState_cat_on_reply.Text" xml:space="preserve"><value>PS1;</value></data><data name="radButtonState_catstate.Text" xml:space="preserve"><value>CAT   (eg. use [STATE]PS; in macro)</value></data><data name="labelTS6.Text" xml:space="preserve"><value>4char</value></data><data name="radButtonState_off.Text" xml:space="preserve"><value>Off</value></data><data name="txtButtonState_led_4char.Text" xml:space="preserve"><value>WWWW</value></data><data name="radButtonState_on.Text" xml:space="preserve"><value>On</value></data><data name="radButtonState_container_visible.Text" xml:space="preserve"><value>Container visibilty</value></data><data name="radButtonState_toggle.Text" xml:space="preserve"><value>Toggle</value></data><data name="radButtonState_led.Text" xml:space="preserve"><value>Led Indicator</value></data><data name="chkUseParent_loc_size_4.Text" xml:space="preserve"><value>use closed container for location + size</value></data><data name="chkOpensContainer_4.Text" xml:space="preserve"><value>Opens container</value></data><data name="chkClosesContainer_4.Text" xml:space="preserve"><value>Closes container</value></data><data name="chkUseParent_loc_size_3.Text" xml:space="preserve"><value>use closed container for location + size</value></data><data name="chkOpensContainer_3.Text" xml:space="preserve"><value>Opens container</value></data><data name="chkClosesContainer_3.Text" xml:space="preserve"><value>Closes container</value></data><data name="chkUseParent_loc_size_2.Text" xml:space="preserve"><value>use closed container for location + size</value></data><data name="chkOpensContainer_2.Text" xml:space="preserve"><value>Opens container</value></data><data name="chkClosesContainer_2.Text" xml:space="preserve"><value>Closes container</value></data><data name="chkUseParent_loc_size_1.Text" xml:space="preserve"><value>use closed container for location + size</value></data><data name="chkOpensContainer_1.Text" xml:space="preserve"><value>Opens container</value></data><data name="chkClosesContainer_1.Text" xml:space="preserve"><value>Closes container</value></data><data name="chkClosesParent.Text" xml:space="preserve"><value>Closes parent container</value></data><data name="txtOFF.Text" xml:space="preserve"><value>WWWWWWWWWWWWWWWWWWWW</value></data><data name="labelTS2.Text" xml:space="preserve"><value>OFF state text:</value></data><data name="labelTS1.Text" xml:space="preserve"><value>ON state text:</value></data><data name="tpButtonState.Text" xml:space="preserve"><value>Button State</value></data><data name="tpMMIO.Text" xml:space="preserve"><value>MMIO Actions</value></data><data name="tpCAT.Text" xml:space="preserve"><value>CAT Macro</value></data><data name="btnCatTest.ToolTip" xml:space="preserve"><value>Show the cat tester</value></data><data name="$this.Text" xml:space="preserve"><value>Macro Button Configuration</value></data></root>

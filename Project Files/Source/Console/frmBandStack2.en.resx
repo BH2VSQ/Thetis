@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" />
+              </xs:sequence>
+              <xs:attribute name="name" use="required" type="xsd:string" />
+              <xs:attribute name="type" type="xsd:string" />
+              <xs:attribute name="mimetype" type="xsd:string" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string" />
+              <xs:attribute name="name" type="xsd:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+                <xs:element name="comment" type="xsd:string" minOccurs="0" ns1:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" ns1:Ordinal="1" />
+              <xs:attribute name="type" type="xsd:string" ns1:Ordinal="3" />
+              <xs:attribute name="mimetype" type="xsd:string" ns1:Ordinal="4" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+<data name="btnHideSelected.Text" xml:space="preserve"><value>隐藏所选 (wip)</value></data><data name="chkAlwaysOnTop.Text" xml:space="preserve"><value>总在最前</value></data><data name="btnAddStackEntry.Text" xml:space="preserve"><value>添加 New Entry</value></data><data name="lblFilterName.Text" xml:space="preserve"><value>xxxxxx</value></data><data name="btnShowBandStackFilterManager.Text" xml:space="preserve"><value>滤波 管理 (wip)</value></data><data name="btnDeleteSelected.Text" xml:space="preserve"><value>删除 Selected</value></data><data name="btnLockSelected.Text" xml:space="preserve"><value>锁定所选</value></data><data name="btnOptions.Text" xml:space="preserve"><value>选项 &gt;&gt;</value></data><data name="radioLastUsed.Text" xml:space="preserve"><value>返回上次使用频率</value></data><data name="btnSetSpecific.Text" xml:space="preserve"><value>设置</value></data><data name="radioSpecific.Text" xml:space="preserve"><value>返回指定条目</value></data><data name="radioLastUsedEntry.Text" xml:space="preserve"><value>返回上次使用条目</value></data><data name="btnUpdateEntry.Text" xml:space="preserve"><value>更新条目</value></data><data name="chkShowHidden.Text" xml:space="preserve"><value>显示隐藏项</value></data><data name="chkIgnoreDuplicates.Text" xml:space="preserve"><value>忽略重复项</value></data><data name="chkHideOnSelect.Text" xml:space="preserve"><value>选择后隐藏</value></data><data name="chkShowInSpectrum.Text" xml:space="preserve"><value>在频谱图显示</value></data><data name="lblFilterNameCaption.Text" xml:space="preserve"><value>滤波 :</value></data><data name="btnHideSelected.ToolTip" xml:space="preserve"><value>仅在此滤波器结果中隐藏该条目</value></data><data name="chkAlwaysOnTop.ToolTip" xml:space="preserve"><value>该窗口始终位于最前端</value></data><data name="btnAddStackEntry.ToolTip" xml:space="preserve"><value>添加新条目</value></data><data name="lblFilterName.ToolTip" xml:space="preserve"><value>当前滤波器或已填写的描述</value></data><data name="btnShowBandStackFilterManager.ToolTip" xml:space="preserve"><value>显示滤波器管理器</value></data><data name="btnDeleteSelected.ToolTip" xml:space="preserve"><value>删除该条目，它不会出现在任何滤波结果中。</value></data><data name="btnLockSelected.ToolTip" xml:space="preserve"><value>锁定当前所选条目，防止被修改</value></data><data name="btnOptions.ToolTip" xml:space="preserve"><value>展开/收起选项</value></data><data name="radioLastUsed.ToolTip" xml:space="preserve"><value>将返回上次使用频率。</value></data><data name="btnSetSpecific.ToolTip" xml:space="preserve"><value>设置 the specific selected entry</value></data><data name="btnUpdateEntry.ToolTip" xml:space="preserve"><value>更新 an existing unlocked entry</value></data><data name="chkShowHidden.ToolTip" xml:space="preserve"><value>显示此滤波器下已隐藏条目。</value></data><data name="chkIgnoreDuplicates.ToolTip" xml:space="preserve"><value>如果当前 VFO 频率已存在则不更新</value></data><data name="chkHideOnSelect.ToolTip" xml:space="preserve"><value>关闭 the band stack window when an item is selected</value></data><data name="chkShowInSpectrum.ToolTip" xml:space="preserve"><value>在频谱图上以覆盖层显示条目，点击即可选择。</value></data><data name="$this.Text" xml:space="preserve"><value>波段 Stack 2</value></data></root>

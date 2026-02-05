@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" />
+              </xs:sequence>
+              <xs:attribute name="name" use="required" type="xsd:string" />
+              <xs:attribute name="type" type="xsd:string" />
+              <xs:attribute name="mimetype" type="xsd:string" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string" />
+              <xs:attribute name="name" type="xsd:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+                <xs:element name="comment" type="xsd:string" minOccurs="0" ns1:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" ns1:Ordinal="1" />
+              <xs:attribute name="type" type="xsd:string" ns1:Ordinal="3" />
+              <xs:attribute name="mimetype" type="xsd:string" ns1:Ordinal="4" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="labelTS1.Text" xml:space="preserve">
+    <value>This can be used to add a radio that is not responding
+to a discovery request. Some Protocol 1 firmwares require
+the UDP discovery packet to be sent to 255.255.255.255
+and if this radio is behind a router with fowarded ports
+for example (without vpn etc) then it will not respond.
+
+No details will be known about the radio, so:
+- the protocol detection will not operate so you
+   will need to set it correctly
+- the hardware board ID will be taken from the model
+   currently selected in setup
+- the firmware version will not be unknown
+- the radio mac address will show 'Custom' instead
+- the details will not be updated if a connection is made
+   and anything is different to the settings here</value>
+  </data>
+<data name="btnCancel.Text" xml:space="preserve"><value>取消</value></data><data name="btnOK.Text" xml:space="preserve"><value>添加</value></data><data name="labelTS2.Text" xml:space="preserve"><value>Via NIC:</value></data><data name="txtSpecificRadio.Text" xml:space="preserve"><value>192.168.0.155:1024</value></data><data name="labelTS3.Text" xml:space="preserve"><value>Radio IP:Port</value></data><data name="labelTS4.Text" xml:space="preserve"><value>Protocol:</value></data><data name="labelTS5.Text" xml:space="preserve"><value>Board:</value></data><data name="$this.Text" xml:space="preserve"><value>添加 Custom Radio</value></data></root>

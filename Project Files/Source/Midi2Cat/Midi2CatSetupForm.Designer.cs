@@ -60,7 +60,7 @@ namespace Thetis.Midi2Cat
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 2;
-            this.saveButton.Text = "Save";
+            this.saveButton.Text = "保存";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
@@ -94,7 +94,7 @@ namespace Thetis.Midi2Cat
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(421, 28);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Midi Controller Setup Is Initialising Please Wait...";
+            this.label1.Text = "Midi Controller 设置 Is Initialising Please Wait...";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // startTimer
@@ -112,7 +112,7 @@ namespace Thetis.Midi2Cat
             this.Controls.Add(this.devicesTabControl);
             this.MinimizeBox = false;
             this.Name = "Midi2CatSetupForm";
-            this.Text = "Midi Controller Setup";
+            this.Text = "Midi Controller 设置";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Midi2CatSetupForm_FormClosing);
             this.Load += new System.EventHandler(this.Midi2CatSetupForm_Load);
             this.startupPanel.ResumeLayout(false);

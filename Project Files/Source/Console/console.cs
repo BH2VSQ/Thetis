@@ -89,63 +89,12 @@ namespace Thetis
         }
 
         private UiLanguage _selectedUiLanguage = UiLanguage.English;
-        private readonly Dictionary<string, string> _menuEnglishText = new Dictionary<string, string>();
+        private static readonly CultureInfo _uiCultureEnglish = new CultureInfo("en");
+        private static readonly CultureInfo _uiCultureChinese = new CultureInfo("zh-CN");
 
-        private static readonly Dictionary<string, string> _menuZhCnText = new Dictionary<string, string>
-        {
-            { "setupToolStripMenuItem", "\u8BBE\u7F6E" },
-            { "memoryToolStripMenuItem", "\u8BB0\u5FC6" },
-            { "waveToolStripMenuItem", "\u6CE2\u5F62" },
-            { "equalizerToolStripMenuItem", "\u5747\u8861\u5668" },
-            { "xVTRsToolStripMenuItem", "\u8F6C\u6362\u5668" },
-            { "cWXToolStripMenuItem", "CWX" },
-            { "eSCToolStripMenuItem", "ESC" },
-            { "collapseToolStripMenuItem", "\u6536\u8D77" },
-            { "displayControlsToolStripMenuItem", "\u663E\u793A\u63A7\u5236" },
-            { "dSPToolStripMenuItem", "\u6570\u5B57\u4FE1\u53F7\u5904\u7406" },
-            { "bandToolStripMenuItem", "\u6CE2\u6BB5" },
-            { "modeToolStripMenuItem", "\u6A21\u5F0F" },
-            { "filterToolStripMenuItem", "\u6EE4\u6CE2\u5668" },
-            { "rX2ToolStripMenuItem", "RX2" },
-            { "linearityToolStripMenuItem", "\u7EBF\u6027" },
-            { "RAtoolStripMenuItem", "\u65E0\u7EBF\u7535\u5929\u6587" },
-            { "wBToolStripMenuItem", "\u5BBD\u5E26" },
-            { "pIToolStripMenuItem", "PI" },
-            { "BPFToolStripMenuItem", "\u5E26\u901A\u6EE4\u6CE2" },
-            { "finderMenuItem", "\u67E5\u627E" },
-            { "miAbout", "\u5173\u4E8E" },
-            { "languageToolStripMenuItem", "\u8BED\u8A00" },
-            { "languageEnglishToolStripMenuItem", "English" },
-            { "languageChineseToolStripMenuItem", "\u4E2D\u6587" }
-        };
 
-        private static readonly Dictionary<string, string> _menuZhCnByEnglishText = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
-        {
-            { "Setup", "设置" },
-            { "Settings", "设置" },
-            { "Database Manager", "数据库管理" },
-            { "Memory", "记忆" },
-            { "Wave", "波形" },
-            { "Equalizer", "均衡器" },
-            { "Display Controls", "显示控制" },
-            { "Top Controls", "顶部控制" },
-            { "Band Controls", "波段控制" },
-            { "Mode Controls", "模式控制" },
-            { "DSP", "数字信号处理" },
-            { "Band", "波段" },
-            { "Mode", "模式" },
-            { "Filter", "滤波器" },
-            { "Linearity", "线性" },
-            { "Finder", "查找" },
-            { "About", "关于" },
-            { "Language", "语言" },
-            { "English", "英文" },
-            { "Chinese", "中文" },
-            { "Include Borders", "包含边框" },
-            { "System", "系统" },
-            { "Thetis Only", "仅 Thetis" },
-            { "Bypass", "旁路" }
-        };
+
+
 
         #region Variable Declarations
         // ======================================================
@@ -785,7 +734,6 @@ namespace Thetis
             LogTool.AddLogEntry("Initialising components...", "COMP");
 
             InitializeComponent();								// Windows Forms Generated Code
-            CaptureEnglishMenuText();
             ApplyUiLanguage(UiLanguage.English);
             Common.DoubleBufferAll(this, true);
 
@@ -47285,125 +47233,61 @@ namespace Thetis
         {
             _selectedUiLanguage = language;
 
-            if (language == UiLanguage.Chinese)
-            {
-                ApplyLocalizedMenuText(_menuZhCnText);
-            }
-            else
-            {
-                RestoreEnglishMenuText();
-            }
+            CultureInfo culture = language == UiLanguage.Chinese ? _uiCultureChinese : _uiCultureEnglish;
+            ApplyLocalizableResources(culture);
 
             languageEnglishToolStripMenuItem.Checked = language == UiLanguage.English;
             languageChineseToolStripMenuItem.Checked = language == UiLanguage.Chinese;
         }
 
-        private void CaptureEnglishMenuText()
+        private void ApplyLocalizableResources(CultureInfo culture)
         {
-            _menuEnglishText.Clear();
+            Thread.CurrentThread.CurrentUICulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
 
-            foreach (ToolStripItem item in EnumerateAllMenuItems())
+            foreach (Form form in Application.OpenForms)
+                ApplyLocalizableResourcesToForm(form, culture);
+        }
+
+        private static void ApplyLocalizableResourcesToForm(Form form, CultureInfo culture)
+        {
+            if (form == null || form.IsDisposed) return;
+
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(form.GetType());
+            resources.ApplyResources(form, "$this", culture);
+            ApplyLocalizableResourcesToControls(resources, form.Controls, culture);
+
+            if (form.MainMenuStrip != null)
+                ApplyLocalizableResourcesToToolStripItems(resources, form.MainMenuStrip.Items, culture);
+        }
+
+        private static void ApplyLocalizableResourcesToControls(ComponentResourceManager resources, Control.ControlCollection controls, CultureInfo culture)
+        {
+            foreach (Control control in controls)
             {
-                if (item is ToolStripSeparator || string.IsNullOrWhiteSpace(item.Name)) continue;
-                _menuEnglishText[item.Name] = item.Text;
+                if (!string.IsNullOrEmpty(control.Name))
+                    resources.ApplyResources(control, control.Name, culture);
+
+                if (control.ContextMenuStrip != null)
+                    ApplyLocalizableResourcesToToolStripItems(resources, control.ContextMenuStrip.Items, culture);
+
+                if (control is ToolStrip toolStrip)
+                    ApplyLocalizableResourcesToToolStripItems(resources, toolStrip.Items, culture);
+
+                if (control.HasChildren)
+                    ApplyLocalizableResourcesToControls(resources, control.Controls, culture);
             }
         }
 
-        private void RestoreEnglishMenuText()
-        {
-            foreach (ToolStripItem item in EnumerateAllMenuItems())
-            {
-                if (item is ToolStripSeparator || string.IsNullOrWhiteSpace(item.Name)) continue;
-
-                if (_menuEnglishText.TryGetValue(item.Name, out string text))
-                {
-                    item.Text = text;
-                }
-            }
-        }
-
-        private void ApplyLocalizedMenuText(Dictionary<string, string> menuText)
-        {
-            foreach (ToolStripItem item in EnumerateAllMenuItems())
-            {
-                if (item is ToolStripSeparator || string.IsNullOrWhiteSpace(item.Name)) continue;
-
-                if (menuText.TryGetValue(item.Name, out string overrideText))
-                {
-                    item.Text = overrideText;
-                    continue;
-                }
-
-                if (_menuEnglishText.TryGetValue(item.Name, out string englishText))
-                {
-                    item.Text = TranslateMenuTextToChinese(englishText);
-                }
-            }
-        }
-
-        private static string TranslateMenuTextToChinese(string englishText)
-        {
-            if (string.IsNullOrWhiteSpace(englishText)) return englishText;
-
-            if (_menuZhCnByEnglishText.TryGetValue(englishText, out string exactMatch))
-                return exactMatch;
-
-            string text = englishText;
-            text = text.Replace("Setup", "设置");
-            text = text.Replace("Settings", "设置");
-            text = text.Replace("Display", "显示");
-            text = text.Replace("Controls", "控制");
-            text = text.Replace("Control", "控制");
-            text = text.Replace("Database", "数据库");
-            text = text.Replace("Manager", "管理");
-            text = text.Replace("Memory", "记忆");
-            text = text.Replace("Wave", "波形");
-            text = text.Replace("Equalizer", "均衡器");
-            text = text.Replace("Filter", "滤波");
-            text = text.Replace("Band", "波段");
-            text = text.Replace("Mode", "模式");
-            text = text.Replace("Linearity", "线性");
-            text = text.Replace("Finder", "查找");
-            text = text.Replace("About", "关于");
-            text = text.Replace("Language", "语言");
-            text = text.Replace("Chinese", "中文");
-            text = text.Replace("ByPass", "旁路");
-            text = text.Replace("Bypass", "旁路");
-
-            return text;
-        }
-
-        private IEnumerable<ToolStripItem> EnumerateAllMenuItems()
-        {
-            foreach (ToolStripItem item in EnumerateMenuItems(menuStrip1.Items))
-                yield return item;
-
-            foreach (ToolStripItem item in EnumerateMenuItems(contextMenuStripFilterRX1.Items))
-                yield return item;
-
-            foreach (ToolStripItem item in EnumerateMenuItems(contextMenuStripFilterRX2.Items))
-                yield return item;
-
-            foreach (ToolStripItem item in EnumerateMenuItems(contextMenuStripNotch.Items))
-                yield return item;
-
-            foreach (ToolStripItem item in EnumerateMenuItems(statusStripMain.Items))
-                yield return item;
-        }
-
-        private static IEnumerable<ToolStripItem> EnumerateMenuItems(ToolStripItemCollection items)
+        private static void ApplyLocalizableResourcesToToolStripItems(ComponentResourceManager resources, ToolStripItemCollection items, CultureInfo culture)
         {
             foreach (ToolStripItem item in items)
             {
-                yield return item;
+                if (!string.IsNullOrEmpty(item.Name))
+                    resources.ApplyResources(item, item.Name, culture);
 
                 if (item is ToolStripDropDownItem dropDownItem)
-                {
-                    foreach (ToolStripItem child in EnumerateMenuItems(dropDownItem.DropDownItems))
-                    {
-                        yield return child;
-                    }
-                }
+                    ApplyLocalizableResourcesToToolStripItems(resources, dropDownItem.DropDownItems, culture);
             }
         }
 

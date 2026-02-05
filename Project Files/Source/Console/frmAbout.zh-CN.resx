@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" />
+              </xs:sequence>
+              <xs:attribute name="name" use="required" type="xsd:string" />
+              <xs:attribute name="type" type="xsd:string" />
+              <xs:attribute name="mimetype" type="xsd:string" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string" />
+              <xs:attribute name="name" type="xsd:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+                <xs:element name="comment" type="xsd:string" minOccurs="0" ns1:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" ns1:Ordinal="1" />
+              <xs:attribute name="type" type="xsd:string" ns1:Ordinal="3" />
+              <xs:attribute name="mimetype" type="xsd:string" ns1:Ordinal="4" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="labelTS4.Text" xml:space="preserve">
+    <value>Thetis and related code is covered by the GNU General Public License (at least version 2) and uses code and libraries from other projects and/or sources.
+
+FlexRadio Systems, PortAudio (audio), SharpDX (directX), RawInput (input capture), ExCSS (stylesheets), FTD2XX (ftdi), Newtonsoft (json), SkiaSharp (image handling), Svg.
+The Thetis splash screen, install banners and icons have been AI generated.</value>
+  </data>
+<data name="lnkLicence.Text" xml:space="preserve"><value>许可条款</value></data><data name="btnReleaseNotes.Text" xml:space="preserve"><value>Release\r\nNotes</value></data><data name="btnUpdatedRelease.Text" xml:space="preserve"><value>版本 2.10.3.8\r\nhas been released</value></data><data name="btnVisit.Text" xml:space="preserve"><value>View</value></data><data name="btnDXDiag.Text" xml:space="preserve"><value>DxDiag</value></data><data name="btnSysInfo.Text" xml:space="preserve"><value>系统信息</value></data><data name="btnCopyContributors.Text" xml:space="preserve"><value>Copy Info</value></data><data name="labelTS3.Text" xml:space="preserve"><value>Links / Manuals:</value></data><data name="labelTS2.Text" xml:space="preserve"><value>贡献者:</value></data><data name="btnOK.Text" xml:space="preserve"><value>确定</value></data><data name="labelTS1.Text" xml:space="preserve"><value>Thetis</value></data><data name="btnReleaseNotes.ToolTip" xml:space="preserve"><value>Show the release notes</value></data><data name="btnUpdatedRelease.ToolTip" xml:space="preserve"><value>New release available</value></data><data name="btnVisit.ToolTip" xml:space="preserve"><value>Visit he selected link</value></data><data name="btnDXDiag.ToolTip" xml:space="preserve"><value>Run dxDiag</value></data><data name="btnSysInfo.ToolTip" xml:space="preserve"><value>显示系统信息</value></data><data name="btnCopyContributors.ToolTip" xml:space="preserve"><value>Copy the version info to the clipboard</value></data><data name="$this.Text" xml:space="preserve"><value>关于 Thetis</value></data></root>

@@ -62,7 +62,7 @@
             this.btnCancel.Selectable = true;
             this.btnCancel.Size = new System.Drawing.Size(86, 27);
             this.btnCancel.TabIndex = 1;
-            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnOK
@@ -74,7 +74,7 @@
             this.btnOK.Selectable = true;
             this.btnOK.Size = new System.Drawing.Size(86, 27);
             this.btnOK.TabIndex = 2;
-            this.btnOK.Text = "Add";
+            this.btnOK.Text = "添加";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
             // labelTS2
@@ -177,7 +177,7 @@
             this.MinimizeBox = false;
             this.Name = "frmAddCustomRadio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Add Custom Radio";
+            this.Text = "添加 Custom Radio";
             this.ResumeLayout(false);
             this.PerformLayout();
 
