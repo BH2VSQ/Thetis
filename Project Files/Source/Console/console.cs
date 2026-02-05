@@ -82,6 +82,15 @@ namespace Thetis
 
         public const int MAX_FPS = 640;
 
+        private enum UiLanguage
+        {
+            English,
+            ChineseSimplified
+        }
+
+        private const string UiLanguageConfigFile = "ui_language.cfg";
+        private UiLanguage _currentUiLanguage = UiLanguage.English;
+
         
 
         #region Variable Declarations
@@ -672,6 +681,7 @@ namespace Thetis
 #endif
             AppDataPath = app_data_path;
             //AppDataPath has been set at this point
+            _currentUiLanguage = LoadUiLanguagePreference();
 
             if (_check_error_log)
             {
@@ -721,6 +731,7 @@ namespace Thetis
             LogTool.AddLogEntry("Initialising components...", "COMP");
 
             InitializeComponent();								// Windows Forms Generated Code
+            ApplyUiLanguageToMenuTexts();
             Common.DoubleBufferAll(this, true);
 
             InitialiseAndromedaMenus();
@@ -47115,6 +47126,90 @@ namespace Thetis
         }
         //
         #endregion
+
+        private UiLanguage LoadUiLanguagePreference()
+        {
+            try
+            {
+                string filePath = Path.Combine(AppDataPath, UiLanguageConfigFile);
+
+                if (!File.Exists(filePath))
+                {
+                    return UiLanguage.English;
+                }
+
+                string savedLanguage = File.ReadAllText(filePath).Trim();
+
+                return string.Equals(savedLanguage, "zh-CN", StringComparison.OrdinalIgnoreCase)
+                    ? UiLanguage.ChineseSimplified
+                    : UiLanguage.English;
+            }
+            catch
+            {
+                return UiLanguage.English;
+            }
+        }
+
+        private void SaveUiLanguagePreference(UiLanguage language)
+        {
+            try
+            {
+                if (!Directory.Exists(AppDataPath))
+                {
+                    Directory.CreateDirectory(AppDataPath);
+                }
+
+                string filePath = Path.Combine(AppDataPath, UiLanguageConfigFile);
+                string languageCode = language == UiLanguage.ChineseSimplified ? "zh-CN" : "en-US";
+                File.WriteAllText(filePath, languageCode);
+            }
+            catch
+            {
+            }
+        }
+
+        private void ApplyUiLanguageToMenuTexts()
+        {
+            bool isChinese = _currentUiLanguage == UiLanguage.ChineseSimplified;
+
+            languageToolStripMenuItem.Text = isChinese ? "语言" : "Language";
+            englishToolStripMenuItem.Text = isChinese ? "英文" : "English";
+            chineseToolStripMenuItem.Text = "中文";
+
+            englishToolStripMenuItem.Checked = !isChinese;
+            chineseToolStripMenuItem.Checked = isChinese;
+        }
+
+        private void SwitchUiLanguage(UiLanguage language)
+        {
+            if (_currentUiLanguage == language)
+            {
+                return;
+            }
+
+            _currentUiLanguage = language;
+            SaveUiLanguagePreference(language);
+            ApplyUiLanguageToMenuTexts();
+
+            string message = language == UiLanguage.ChineseSimplified
+                ? "语言偏好已保存，重新启动 Thetis 后会应用更多中文翻译。"
+                : "Language preference saved. Restart Thetis to apply additional translated text.";
+
+            string caption = language == UiLanguage.ChineseSimplified ? "语言切换" : "Language Switch";
+
+            MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1, Common.MB_TOPMOST);
+        }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SwitchUiLanguage(UiLanguage.English);
+        }
+
+        private void chineseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SwitchUiLanguage(UiLanguage.ChineseSimplified);
+        }
 
         private void databaseManagerToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -859,6 +859,9 @@
             this.BPF1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BPF2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.finderMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chineseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStripMain = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton_ScreenSize = new System.Windows.Forms.ToolStripDropDownButton();
@@ -4118,6 +4121,7 @@
             this.pIToolStripMenuItem,
             this.BPFToolStripMenuItem,
             this.finderMenuItem,
+            this.languageToolStripMenuItem,
             this.miAbout});
             this.menuStrip1.Name = "menuStrip1";
             // 
@@ -4990,6 +4994,27 @@
             this.finderMenuItem.Name = "finderMenuItem";
             resources.ApplyResources(this.finderMenuItem, "finderMenuItem");
             this.finderMenuItem.Click += new System.EventHandler(this.finderMenuItem_Click);
+            // 
+            // languageToolStripMenuItem
+            // 
+            this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.englishToolStripMenuItem,
+            this.chineseToolStripMenuItem});
+            this.languageToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
+            // 
+            // englishToolStripMenuItem
+            // 
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
+            // 
+            // chineseToolStripMenuItem
+            // 
+            this.chineseToolStripMenuItem.Name = "chineseToolStripMenuItem";
+            resources.ApplyResources(this.chineseToolStripMenuItem, "chineseToolStripMenuItem");
+            this.chineseToolStripMenuItem.Click += new System.EventHandler(this.chineseToolStripMenuItem_Click);
             // 
             // miAbout
             // 
@@ -7907,6 +7932,9 @@
         private ToolStripMenuItem databaseManagerToolStripMenuItem;
         private ToolStripMenuItem setupToolStripMenuItem1;
         private ToolStripSeparator toolStripMenuItem1;
+        private ToolStripMenuItem languageToolStripMenuItem;
+        private ToolStripMenuItem englishToolStripMenuItem;
+        private ToolStripMenuItem chineseToolStripMenuItem;
         private ToolStripMenuItem miAbout;
         private PictureBox pbAutoAttWarningRX1;
         private PictureBox pbAutoAttWarningRX2;
