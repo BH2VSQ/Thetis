@@ -92,6 +92,7 @@ namespace Thetis
         private readonly Dictionary<string, string> _menuEnglishText = new Dictionary<string, string>();
         private readonly Dictionary<Control, string> _controlEnglishText = new Dictionary<Control, string>();
         private readonly Dictionary<ToolStripItem, string> _toolStripEnglishText = new Dictionary<ToolStripItem, string>();
+        private readonly Dictionary<DataGridViewColumn, string> _dataGridColumnEnglishText = new Dictionary<DataGridViewColumn, string>();
 
         private static readonly Dictionary<string, string> _menuZhCnText = new Dictionary<string, string>
         {
@@ -47326,7 +47327,10 @@ namespace Thetis
                     foreach (DataGridViewColumn col in dgv.Columns)
                     {
                         if (string.IsNullOrWhiteSpace(col.HeaderText)) continue;
-                        if (!_controlEnglishText.ContainsKey(dgv)) CacheControlText(dgv);
+
+                        if (!_dataGridColumnEnglishText.ContainsKey(col))
+                            _dataGridColumnEnglishText[col] = col.HeaderText;
+
                         col.HeaderText = TranslateMenuTextToChinese(col.HeaderText);
                     }
                 }
@@ -47349,6 +47353,15 @@ namespace Thetis
             {
                 if (_controlEnglishText.TryGetValue(control, out string text))
                     control.Text = text;
+
+                if (control is DataGridView dgv)
+                {
+                    foreach (DataGridViewColumn col in dgv.Columns)
+                    {
+                        if (_dataGridColumnEnglishText.TryGetValue(col, out string headerText))
+                            col.HeaderText = headerText;
+                    }
+                }
 
                 if (control.ContextMenuStrip != null)
                 {
