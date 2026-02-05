@@ -119,6 +119,35 @@ namespace Thetis
             { "languageChineseToolStripMenuItem", "\u4E2D\u6587" }
         };
 
+        private static readonly Dictionary<string, string> _menuZhCnByEnglishText = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
+        {
+            { "Setup", "设置" },
+            { "Settings", "设置" },
+            { "Database Manager", "数据库管理" },
+            { "Memory", "记忆" },
+            { "Wave", "波形" },
+            { "Equalizer", "均衡器" },
+            { "Display Controls", "显示控制" },
+            { "Top Controls", "顶部控制" },
+            { "Band Controls", "波段控制" },
+            { "Mode Controls", "模式控制" },
+            { "DSP", "数字信号处理" },
+            { "Band", "波段" },
+            { "Mode", "模式" },
+            { "Filter", "滤波器" },
+            { "Linearity", "线性" },
+            { "Finder", "查找" },
+            { "About", "关于" },
+            { "Language", "语言" },
+            { "English", "英文" },
+            { "Chinese", "中文" },
+            { "Include Borders", "包含边框" },
+            { "System", "系统" },
+            { "Thetis Only", "仅 Thetis" },
+            { "ByPass", "旁路" },
+            { "Bypass", "旁路" }
+        };
+
         #region Variable Declarations
         // ======================================================
         // Variable Declarations
@@ -47184,49 +47213,104 @@ namespace Thetis
         {
             _menuEnglishText.Clear();
 
-            foreach (ToolStripMenuItem menuItem in EnumerateMenuItems(menuStrip1.Items))
+            foreach (ToolStripItem item in EnumerateAllMenuItems())
             {
-                if (string.IsNullOrWhiteSpace(menuItem.Name)) continue;
-                _menuEnglishText[menuItem.Name] = menuItem.Text;
+                if (item is ToolStripSeparator || string.IsNullOrWhiteSpace(item.Name)) continue;
+                _menuEnglishText[item.Name] = item.Text;
             }
         }
 
         private void RestoreEnglishMenuText()
         {
-            foreach (ToolStripMenuItem menuItem in EnumerateMenuItems(menuStrip1.Items))
+            foreach (ToolStripItem item in EnumerateAllMenuItems())
             {
-                if (!string.IsNullOrWhiteSpace(menuItem.Name) && _menuEnglishText.TryGetValue(menuItem.Name, out string text))
+                if (item is ToolStripSeparator || string.IsNullOrWhiteSpace(item.Name)) continue;
+
+                if (_menuEnglishText.TryGetValue(item.Name, out string text))
                 {
-                    menuItem.Text = text;
+                    item.Text = text;
                 }
             }
         }
 
         private void ApplyLocalizedMenuText(Dictionary<string, string> menuText)
         {
-            foreach (ToolStripMenuItem menuItem in EnumerateMenuItems(menuStrip1.Items))
+            foreach (ToolStripItem item in EnumerateAllMenuItems())
             {
-                ApplyLocalizedMenuItemText(menuItem, menuItem.Name, menuText);
+                if (item is ToolStripSeparator || string.IsNullOrWhiteSpace(item.Name)) continue;
+
+                if (menuText.TryGetValue(item.Name, out string overrideText))
+                {
+                    item.Text = overrideText;
+                    continue;
+                }
+
+                if (_menuEnglishText.TryGetValue(item.Name, out string englishText))
+                {
+                    item.Text = TranslateMenuTextToChinese(englishText);
+                }
             }
         }
 
-        private static void ApplyLocalizedMenuItemText(ToolStripMenuItem item, string key, Dictionary<string, string> menuText)
+        private static string TranslateMenuTextToChinese(string englishText)
         {
-            if (menuText.TryGetValue(key, out string text))
-            {
-                item.Text = text;
-            }
+            if (string.IsNullOrWhiteSpace(englishText)) return englishText;
+
+            if (_menuZhCnByEnglishText.TryGetValue(englishText, out string exactMatch))
+                return exactMatch;
+
+            string text = englishText;
+            text = text.Replace("Setup", "设置");
+            text = text.Replace("Settings", "设置");
+            text = text.Replace("Display", "显示");
+            text = text.Replace("Controls", "控制");
+            text = text.Replace("Control", "控制");
+            text = text.Replace("Database", "数据库");
+            text = text.Replace("Manager", "管理");
+            text = text.Replace("Memory", "记忆");
+            text = text.Replace("Wave", "波形");
+            text = text.Replace("Equalizer", "均衡器");
+            text = text.Replace("Filter", "滤波");
+            text = text.Replace("Band", "波段");
+            text = text.Replace("Mode", "模式");
+            text = text.Replace("Linearity", "线性");
+            text = text.Replace("Finder", "查找");
+            text = text.Replace("About", "关于");
+            text = text.Replace("Language", "语言");
+            text = text.Replace("Chinese", "中文");
+            text = text.Replace("ByPass", "旁路");
+            text = text.Replace("Bypass", "旁路");
+
+            return text;
         }
 
-        private static IEnumerable<ToolStripMenuItem> EnumerateMenuItems(ToolStripItemCollection items)
+        private IEnumerable<ToolStripItem> EnumerateAllMenuItems()
+        {
+            foreach (ToolStripItem item in EnumerateMenuItems(menuStrip1.Items))
+                yield return item;
+
+            foreach (ToolStripItem item in EnumerateMenuItems(contextMenuStripFilterRX1.Items))
+                yield return item;
+
+            foreach (ToolStripItem item in EnumerateMenuItems(contextMenuStripFilterRX2.Items))
+                yield return item;
+
+            foreach (ToolStripItem item in EnumerateMenuItems(contextMenuStripNotch.Items))
+                yield return item;
+
+            foreach (ToolStripItem item in EnumerateMenuItems(statusStripMain.Items))
+                yield return item;
+        }
+
+        private static IEnumerable<ToolStripItem> EnumerateMenuItems(ToolStripItemCollection items)
         {
             foreach (ToolStripItem item in items)
             {
-                if (item is ToolStripMenuItem menuItem)
-                {
-                    yield return menuItem;
+                yield return item;
 
-                    foreach (ToolStripMenuItem child in EnumerateMenuItems(menuItem.DropDownItems))
+                if (item is ToolStripDropDownItem dropDownItem)
+                {
+                    foreach (ToolStripItem child in EnumerateMenuItems(dropDownItem.DropDownItems))
                     {
                         yield return child;
                     }
