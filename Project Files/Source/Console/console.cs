@@ -124,9 +124,23 @@ namespace Thetis
             { "Setup", "设置" },
             { "Settings", "设置" },
             { "Database Manager", "数据库管理" },
+            { "DatabaseManager", "数据库管理" },
             { "Memory", "记忆" },
+            { "Memory Interface", "记忆接口" },
+            { "MemoryInterface", "记忆接口" },
             { "Wave", "波形" },
+            { "Wave File Controls", "波形文件控制" },
+            { "WaveFileControls", "波形文件控制" },
             { "Equalizer", "均衡器" },
+            { "Equalizer Settings", "均衡器设置" },
+            { "EqualizerSettings", "均衡器设置" },
+            { "XVTR Setup", "XVTR设置" },
+            { "XVTRSetup", "XVTR设置" },
+            { "CW Memories and Keyboard", "CW记忆与键盘" },
+            { "CWMemoriesandKeyboard", "CW记忆与键盘" },
+            { "PureSignal", "纯净信号" },
+            { "Radio Astronomy data collection utility", "射电天文数据采集工具" },
+            { "RadioAstromonydatacollectionutility", "射电天文数据采集工具" },
             { "Display Controls", "显示控制" },
             { "Top Controls", "顶部控制" },
             { "Band Controls", "波段控制" },
@@ -136,6 +150,8 @@ namespace Thetis
             { "Mode", "模式" },
             { "Filter", "滤波器" },
             { "Linearity", "线性" },
+            { "Wideband", "宽带" },
+            { "wideband", "宽带" },
             { "Finder", "查找" },
             { "About", "关于" },
             { "Language", "语言" },
@@ -47357,12 +47373,23 @@ namespace Thetis
             text = text.Replace("Database", "数据库");
             text = text.Replace("Manager", "管理");
             text = text.Replace("Memory", "记忆");
+            text = text.Replace("Interface", "接口");
             text = text.Replace("Wave", "波形");
+            text = text.Replace("File", "文件");
             text = text.Replace("Equalizer", "均衡器");
             text = text.Replace("Filter", "滤波");
             text = text.Replace("Band", "波段");
             text = text.Replace("Mode", "模式");
             text = text.Replace("Linearity", "线性");
+            text = text.Replace("XVTR", "XVTR");
+            text = text.Replace("Memories", "记忆");
+            text = text.Replace("Keyboard", "键盘");
+            text = text.Replace("PureSignal", "纯净信号");
+            text = text.Replace("Astronomy", "天文");
+            text = text.Replace("collection", "采集");
+            text = text.Replace("utility", "工具");
+            text = text.Replace("Wideband", "宽带");
+            text = text.Replace("wideband", "宽带");
             text = text.Replace("Finder", "查找");
             text = text.Replace("About", "关于");
             text = text.Replace("Language", "语言");
