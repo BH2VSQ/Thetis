@@ -147,6 +147,8 @@ namespace Thetis
             { "Bypass", "旁路" }
         };
 
+        private readonly HashSet<ContextMenuStrip> _trackedContextMenus = new HashSet<ContextMenuStrip>();
+
         #region Variable Declarations
         // ======================================================
         // Variable Declarations
@@ -47210,12 +47212,9 @@ namespace Thetis
 
         private void CaptureEnglishMenuText()
         {
-            _menuEnglishText.Clear();
-
             foreach (ToolStripItem item in EnumerateAllMenuItems())
             {
-                if (item is ToolStripSeparator || string.IsNullOrWhiteSpace(item.Name)) continue;
-                _menuEnglishText[item.Name] = item.Text;
+                CacheEnglishMenuItemText(item);
             }
         }
 
@@ -47224,6 +47223,8 @@ namespace Thetis
             foreach (ToolStripItem item in EnumerateAllMenuItems())
             {
                 if (item is ToolStripSeparator || string.IsNullOrWhiteSpace(item.Name)) continue;
+
+                CacheEnglishMenuItemText(item);
 
                 if (_menuEnglishText.TryGetValue(item.Name, out string text))
                 {
@@ -47237,6 +47238,8 @@ namespace Thetis
             foreach (ToolStripItem item in EnumerateAllMenuItems())
             {
                 if (item is ToolStripSeparator || string.IsNullOrWhiteSpace(item.Name)) continue;
+
+                CacheEnglishMenuItemText(item);
 
                 if (menuText.TryGetValue(item.Name, out string overrideText))
                 {
@@ -47283,8 +47286,20 @@ namespace Thetis
             return text;
         }
 
+        private void CacheEnglishMenuItemText(ToolStripItem item)
+        {
+            if (item is ToolStripSeparator || string.IsNullOrWhiteSpace(item.Name)) return;
+
+            if (!_menuEnglishText.ContainsKey(item.Name))
+            {
+                _menuEnglishText[item.Name] = item.Text;
+            }
+        }
+
         private IEnumerable<ToolStripItem> EnumerateAllMenuItems()
         {
+            _trackedContextMenus.Clear();
+
             foreach (ToolStripItem item in EnumerateMenuItems(menuStrip1.Items))
                 yield return item;
 
@@ -47299,6 +47314,29 @@ namespace Thetis
 
             foreach (ToolStripItem item in EnumerateMenuItems(statusStripMain.Items))
                 yield return item;
+
+            foreach (ContextMenuStrip cms in EnumerateContextMenusFromControls(this))
+            {
+                if (_trackedContextMenus.Add(cms))
+                {
+                    foreach (ToolStripItem item in EnumerateMenuItems(cms.Items))
+                        yield return item;
+                }
+            }
+        }
+
+        private static IEnumerable<ContextMenuStrip> EnumerateContextMenusFromControls(Control root)
+        {
+            if (root == null) yield break;
+
+            if (root.ContextMenuStrip != null)
+                yield return root.ContextMenuStrip;
+
+            foreach (Control child in root.Controls)
+            {
+                foreach (ContextMenuStrip cms in EnumerateContextMenusFromControls(child))
+                    yield return cms;
+            }
         }
 
         private static IEnumerable<ToolStripItem> EnumerateMenuItems(ToolStripItemCollection items)
